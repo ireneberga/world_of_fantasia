@@ -9,7 +9,16 @@ EditorBuildSettings:
     path: Assets/Scenes/GameStart.unity
     guid: b94c26ce5e1f16f4c9b28b398e8e9ceb
   - enabled: 1
+    path: Assets/Scenes/Introduction.unity
+    guid: 69c35a38b1ae0c948a18581d83378d77
+  - enabled: 1
     path: Assets/Scenes/MonsterChoicePie.unity
     guid: cbb879dd0ab85a947a19421a871daccb
+  - enabled: 1
+    path: Assets/Scenes/TutorialAnsia.unity
+    guid: 4ccfe7d0b430c694f978602cc033dae4
+  - enabled: 1
+    path: Assets/Scenes/UpDownAnsia.unity
+    guid: b0e8ef3ce84622c40924ba450163a980
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
