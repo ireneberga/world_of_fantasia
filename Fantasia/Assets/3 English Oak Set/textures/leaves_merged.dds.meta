@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 084abfdb5fc56434eac5385efd772305
+IHVImageFormatImporter:
+  externalObjects: {}
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  isReadable: 0
+  sRGBTexture: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  ignoreMipmapLimit: 0
+  mipmapLimitGroupName: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 260312
+  packageName: Free English Oak Set
+  packageVersion: 1.0
+  assetPath: Assets/3 English Oak Set/textures/leaves_merged.dds
+  uploadId: 599636

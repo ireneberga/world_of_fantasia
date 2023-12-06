@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e7689051185d12f4298e1ebb2693a29f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 188109
+  packageName: Stylized Plants Kit
+  packageVersion: 1.0
+  assetPath: Assets/Stylized Plants Kit/Presets/Defaults/AudioDecompressOnLoad.preset
+  uploadId: 414485

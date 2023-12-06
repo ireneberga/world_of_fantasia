@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UpDownAnsia.unity
     guid: b0e8ef3ce84622c40924ba450163a980
+  - enabled: 1
+    path: Assets/Scenes/PALUDE.unity
+    guid: 1978631e2d03d994daaa2fb9d11e0cb1
+  - enabled: 1
+    path: Assets/Scenes/make_sentence.unity
+    guid: 7e58ffc15403a4b44b2de821ced36da5
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
