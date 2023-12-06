@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GameStart.unity
+    guid: b94c26ce5e1f16f4c9b28b398e8e9ceb
+  - enabled: 1
+    path: Assets/Scenes/MonsterChoicePie.unity
+    guid: cbb879dd0ab85a947a19421a871daccb
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
