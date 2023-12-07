@@ -7,7 +7,7 @@ public class SceneChangeOnTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))  // Check if the entering object is the player
         {
-            SceneManager.LoadScene("TempScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("TutorialAnsia", LoadSceneMode.Single);
         }
     }
 }

@@ -13,13 +13,40 @@ public class NextButtonScript : MonoBehaviour
     private int currentLineIndex = 0;
     public GameObject heart1, heart2, heart3, layer1, layer2, layer3, gameover;
 
-    private string _mostro1 = "small anxia";
+    //private string _mostro1 = "small anxia";
     //public static bool flagtut = false;
     //private int contatorePulsanti = 0;
+    private string _mostro2 ;
+
+    private int clust;
+    private string username;
+    
+    private void Awake()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        //clust = 0;
+        clust = PlayerPrefs.GetInt("ClusterValue");
+        username = PlayerPrefs.GetString("Username");
+
+
+    }
 
     void Start()
     {
-        //contatorePulsanti = 3;
+        if (clust == 0)
+        {
+            _mostro2 = "small anxia";
+            
+        }
+        else if (clust == 1)
+        {
+            _mostro2 = "medium anxia";
+        }
+        else
+        {
+            _mostro2 = "big anxia";
+        }
 
         heart1.gameObject.SetActive(false);
         heart2.gameObject.SetActive(false);
@@ -29,6 +56,9 @@ public class NextButtonScript : MonoBehaviour
         layer3.gameObject.SetActive(false);
         gameover.gameObject.SetActive(false);
         warn.text = "";
+        
+        Debug.Log(_mostro2 + " start");
+        Debug.Log(username + " start");
 
 
 
@@ -42,17 +72,17 @@ public class NextButtonScript : MonoBehaviour
             "In the following game the dragon will move up and down according to the rhythm of the breath, try to follow it with the arrows of your board");
         TutorialCharacterMovement.active = true;
 
-        if (_mostro1 == "big anxia")
+        if (_mostro2 == "big anxia")
         {
             speechLines.Add("Now that you have understood how it works let's have five minutes of relaxation");
         }
-        else if (_mostro1 == "medium anxia")
+        else if (_mostro2 == "medium anxia")
         {
             speechLines.Add(
                 "If you press the the wrong arrow or the rhythm with which you press the arrows is wrong for too many times a warning will appear");
             speechLines.Add("Try to correct yourself and enjoy five minutes of relaxation ");
         }
-        else if (_mostro1 == "small anxia")
+        else if (_mostro2 == "small anxia")
         {
             speechLines.Add("The lives that you have left are shown in the up left corner");
             // TranslateObject(heart1);
@@ -79,7 +109,7 @@ public class NextButtonScript : MonoBehaviour
         {
             InitializeSpeechLines();
             TutorialText.text = speechLines[currentLineIndex];
-            if (_mostro1 == "small anxia")
+            if (_mostro2 == "small anxia")
             {
                 heart1.gameObject.SetActive(true);
                 layer1.gameObject.SetActive(true);
@@ -96,7 +126,7 @@ public class NextButtonScript : MonoBehaviour
             // Mostra la prossima linea del discorso
             TutorialText.text = speechLines[currentLineIndex];
             
-            if (_mostro1 == "small anxia")
+            if (_mostro2 == "small anxia")
             {
                 if (currentLineIndex == 2)
                 {
@@ -109,7 +139,7 @@ public class NextButtonScript : MonoBehaviour
                 }
             }
 
-            if (_mostro1 == "medium anxia")
+            if (_mostro2 == "medium anxia")
             {
                 warn.text = "Try to better follow the rhythm";
             }

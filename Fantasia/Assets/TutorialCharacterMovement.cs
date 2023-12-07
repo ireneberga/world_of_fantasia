@@ -9,7 +9,9 @@ public class TutorialCharacterMovement : MonoBehaviour
     public float amplitude = 0.6f;
     public float period = 12f; // Periodo di 11.6 secondi
     //string mostro2 = PlayerPrefs.GetInt("mostro2", mostro2); 
-    string mostro2 = "medium anxia";
+    private string mostro2 ;
+
+    private int clust; 
     // private bool flagerroredown = false; 
     // private bool flagerroreup = false; 
     // private bool flagwarn = false;
@@ -24,7 +26,26 @@ public class TutorialCharacterMovement : MonoBehaviour
     //public Text breathText;
     public Text tutorialText;
     private List<string>  speechLines;
-    
+
+    private void Awake()
+    {
+        //clust = 0;
+        clust = PlayerPrefs.GetInt("clusterValue");
+
+        if (clust == 0)
+        {
+            mostro2 = "small anxia";
+            
+        }
+        else if (clust == 1)
+        {
+            mostro2 = "medium anxia";
+        }
+        else
+        {
+            mostro2 = "big anxia";
+        }
+    }
 
     void Start()
     {

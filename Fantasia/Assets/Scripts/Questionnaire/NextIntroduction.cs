@@ -57,7 +57,7 @@ public class NextIntroduction : MonoBehaviour
         PlayerPrefs.Save();
 
         // Change to the next scene (replace "YourNextSceneName" with the actual scene name you want to load)
-        SceneManager.LoadScene("Game1");
+        SceneManager.LoadScene("PALUDE");
     }
 }
 

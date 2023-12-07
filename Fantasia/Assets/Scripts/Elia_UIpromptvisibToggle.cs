@@ -67,6 +67,10 @@ public class InteractionPrompt : MonoBehaviour
             else if (hit.collider.CompareTag("SceneTransitioner"))
             {
                 ShowPrompt("Go forward to meet Falkor");
+                if (Input.GetKey(activateKey))
+                {
+                    SceneManager.LoadScene("TutorialAnsia");
+                }
             }
             else if (hit.collider.CompareTag("speakable"))
             {
