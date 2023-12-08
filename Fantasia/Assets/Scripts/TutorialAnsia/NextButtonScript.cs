@@ -25,8 +25,8 @@ public class NextButtonScript : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        //clust = 0;
-        clust = PlayerPrefs.GetInt("ClusterValue");
+        clust = 0;
+        //clust = PlayerPrefs.GetInt("ClusterValue");
         username = PlayerPrefs.GetString("Username");
 
 

@@ -36,7 +36,7 @@ public class messagebreath : MonoBehaviour
 
         while (Time.time - startTime < 2f)
         {
-            textField.text = "hold in";
+            textField.text = "HOLD IN";
             yield return null;
         }
     }
@@ -46,7 +46,7 @@ public class messagebreath : MonoBehaviour
 
         while (Time.time - startTime < 4f)
         {
-            textField.text = "breath in";
+            textField.text = "BREATH IN";
             yield return null;
         }
     }
@@ -57,7 +57,7 @@ public class messagebreath : MonoBehaviour
 
         while (Time.time - startTime < 4f)
         {
-            textField.text = "breath out";
+            textField.text = "BREATH OUT";
             yield return null;
         }
     }
