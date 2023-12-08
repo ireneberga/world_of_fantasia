@@ -11,7 +11,8 @@ public class NextButtonScript : MonoBehaviour
     //public Button showTextButton;
     private List<string> speechLines;
     private int currentLineIndex = 0;
-    public GameObject heart1, heart2, heart3, layer1, layer2, layer3, gameover;
+    public GameObject heart1, heart2, heart3, layer1, layer2, layer3, gameover, arrowup, arrowdown;
+    public GameObject indcloud, indlives;
 
     //private string _mostro1 = "small anxia";
     //public static bool flagtut = false;
@@ -20,6 +21,7 @@ public class NextButtonScript : MonoBehaviour
 
     private int clust;
     private string username;
+    private int age;
     
     private void Awake()
     {
@@ -27,6 +29,8 @@ public class NextButtonScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         clust = 0;
         //clust = PlayerPrefs.GetInt("ClusterValue");
+        //age = PlayerPrefs.GetInt("Age");
+        age = 50;
         username = PlayerPrefs.GetString("Username");
 
 
@@ -55,6 +59,10 @@ public class NextButtonScript : MonoBehaviour
         layer2.gameObject.SetActive(false);
         layer3.gameObject.SetActive(false);
         gameover.gameObject.SetActive(false);
+        arrowup.gameObject.SetActive(false);
+        arrowdown.gameObject.SetActive(false);
+        indcloud.gameObject.SetActive(false);
+        indlives.gameObject.SetActive(false);
         warn.text = "";
         
         Debug.Log(_mostro2 + " start");
@@ -71,6 +79,13 @@ public class NextButtonScript : MonoBehaviour
         speechLines.Add(
             "In the following game the dragon will move up and down according to the rhythm of the breath, try to follow it with the arrows of your board");
         TutorialCharacterMovement.active = true;
+
+        if (age > 45)
+        {
+            arrowup.gameObject.SetActive(true);
+            arrowdown.gameObject.SetActive(true);
+            indcloud.gameObject.SetActive(true);
+        }
 
         if (_mostro2 == "big anxia")
         {
@@ -123,14 +138,32 @@ public class NextButtonScript : MonoBehaviour
         }
         else if (currentLineIndex < speechLines.Count)
         {
+           arrowup.gameObject.SetActive(false);
+           arrowdown.gameObject.SetActive(false);
+           indcloud.gameObject.SetActive(false);
+            
+            
             // Mostra la prossima linea del discorso
             TutorialText.text = speechLines[currentLineIndex];
             
             if (_mostro2 == "small anxia")
             {
-                if (currentLineIndex == 2)
+                if(currentLineIndex == 1)
+                {
+                    if(age>45)
+                    {
+                        indlives.gameObject.SetActive(true);
+                    }
+                        
+                }
+                else if (currentLineIndex == 2)
                 {
                     heart3.gameObject.SetActive(false);
+                    
+                    if(age>45)
+                    {
+                      indlives.gameObject.SetActive(false);
+                     }
 
                 }
                 else if (currentLineIndex == 3)
