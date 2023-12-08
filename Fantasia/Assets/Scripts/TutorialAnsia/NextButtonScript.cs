@@ -27,10 +27,10 @@ public class NextButtonScript : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        clust = 0;
-        //clust = PlayerPrefs.GetInt("ClusterValue");
-        //age = PlayerPrefs.GetInt("Age");
-        age = 50;
+        //clust = 0;
+        clust = PlayerPrefs.GetInt("ClusterValue");
+        age = PlayerPrefs.GetInt("Age");
+        //age = 50;
         username = PlayerPrefs.GetString("Username");
 
 
