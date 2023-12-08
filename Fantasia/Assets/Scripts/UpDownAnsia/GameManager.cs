@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    string mostro2 = "small anxia";
     public GameObject heart1, heart2, heart3, layer1, layer2, layer3;
     public GameObject gameOver;
     // public GameObject audioGameObject;
@@ -16,6 +15,31 @@ public class GameManager : MonoBehaviour
 
     public static int health;
     // Start is called before the first frame update
+    
+    private string mostro2 ;
+
+    private int clust;
+    
+    private void Awake()
+    {
+        //clust = 0;
+        clust = PlayerPrefs.GetInt("ClusterValue");
+
+        if (clust == 0)
+        {
+            mostro2 = "small anxia";
+            
+        }
+        else if (clust == 1)
+        {
+            mostro2 = "medium anxia";
+        }
+        else
+        {
+            mostro2 = "big anxia";
+        }
+    }
+    
     void Start()
     {
         health = 3;

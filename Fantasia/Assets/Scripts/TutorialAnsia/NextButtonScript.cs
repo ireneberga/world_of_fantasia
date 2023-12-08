@@ -149,7 +149,7 @@ public class NextButtonScript : MonoBehaviour
         else
         {
             // Se il discorso è completo, passa alla scena 2
-            SceneManager.LoadScene(4); // Assicurati che il nome della scena sia corretto
+            SceneManager.LoadScene("UpDownAnsia"); // Assicurati che il nome della scena sia corretto
         }
         // Sostituisci con la frase che desideri visualizzare
         //string yourText = "Questa è la tua frase.";

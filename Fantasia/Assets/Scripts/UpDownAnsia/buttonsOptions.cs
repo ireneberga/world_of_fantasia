@@ -9,12 +9,12 @@ public class buttonsOptions : MonoBehaviour
     
     public void Termina()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("UpDownAnsia");
     }
     
     public void Rincomincia()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("UpDownAnsia");
     }
     
     public void TogglePausa()

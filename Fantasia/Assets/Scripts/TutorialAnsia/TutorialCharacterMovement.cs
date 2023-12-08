@@ -30,7 +30,7 @@ public class TutorialCharacterMovement : MonoBehaviour
     private void Awake()
     {
         //clust = 0;
-        clust = PlayerPrefs.GetInt("clusterValue");
+        clust = PlayerPrefs.GetInt("ClusterValue");
 
         if (clust == 0)
         {
