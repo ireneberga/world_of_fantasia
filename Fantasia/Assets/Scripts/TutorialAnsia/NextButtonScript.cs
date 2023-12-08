@@ -12,7 +12,7 @@ public class NextButtonScript : MonoBehaviour
     private List<string> speechLines;
     private int currentLineIndex = 0;
     public GameObject heart1, heart2, heart3, layer1, layer2, layer3, gameover, arrowup, arrowdown;
-    public GameObject indcloud, indlives;
+    public GameObject indcloud, indlives, indlostlife;
 
     //private string _mostro1 = "small anxia";
     //public static bool flagtut = false;
@@ -63,6 +63,7 @@ public class NextButtonScript : MonoBehaviour
         arrowdown.gameObject.SetActive(false);
         indcloud.gameObject.SetActive(false);
         indlives.gameObject.SetActive(false);
+        indlostlife.gameObject.SetActive(false);
         warn.text = "";
         
         Debug.Log(_mostro2 + " start");
@@ -163,12 +164,14 @@ public class NextButtonScript : MonoBehaviour
                     if(age>45)
                     {
                       indlives.gameObject.SetActive(false);
-                     }
+                      indlostlife.gameObject.SetActive(true);
+                    }
 
                 }
                 else if (currentLineIndex == 3)
                 {
                     gameover.gameObject.SetActive(true);
+                    indlostlife.gameObject.SetActive(false);
                 }
             }
 
