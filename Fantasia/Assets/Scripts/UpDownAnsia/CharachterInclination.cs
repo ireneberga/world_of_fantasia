@@ -11,10 +11,9 @@ public class CharacterMovement : MonoBehaviour
     private bool flagerroredown = false; 
     private bool flagerroreup = false; 
     private bool flagwarn = false;
-    public static bool active = true;
     private float tempoPremuto = 0f; // Tempo attuale che la freccia è stata premuta
     private float tempoNonPremuto = 0f;
-    private float tempoWarning = 0f;
+    //private float tempoWarning = 0f;
     private int errore = 0; // Variabile errore
     private int opposto1 = 0;
     private int opposto2 = 0;
@@ -24,11 +23,13 @@ public class CharacterMovement : MonoBehaviour
     private string mostro2 ;
 
     private int clust;
+
     
-        private void Awake()
+
+    private void Awake()
         {
-            //clust = 0;
-            clust = PlayerPrefs.GetInt("ClusterValue");
+            clust = 0;
+            //clust = PlayerPrefs.GetInt("ClusterValue");
             Debug.Log(clust + " clust awake mov");
 
             if (clust == 0)
@@ -47,9 +48,8 @@ public class CharacterMovement : MonoBehaviour
             
             Debug.Log(mostro2 + "awake mov");
         }
-
-
-
+    
+   
    
         void Update()
         {
@@ -84,15 +84,16 @@ public class CharacterMovement : MonoBehaviour
             {
                Controllopressione();
             }
+           
         }
         
-        private void Controllopressione()
+       private void Controllopressione()
         {
             //yield return new WaitForSeconds(9f);
             // Otteniamo l'angolo di rotazione attorno all'asse x
             //float angoloX = transform.rotation.eulerAngles.x;
                   string testoCasella = breathText.text;
-                  tempoWarning = +Time.deltaTime;
+                  //tempoWarning = +Time.deltaTime;
                   Debug.Log(testoCasella);
                 // Controlla se la freccia su è premuta
                 if (Input.GetKey(KeyCode.UpArrow) ) //& angoloX < 0
@@ -117,7 +118,7 @@ public class CharacterMovement : MonoBehaviour
                         
                     }
 
-                    if (testoCasella != "breath in")  //testoCasella != "breath in"
+                    if (testoCasella != "BREATH IN")  //testoCasella != "breath in"
                     {
                         opposto1++;
 
@@ -153,7 +154,7 @@ public class CharacterMovement : MonoBehaviour
                         
                     }
                     
-                    if (testoCasella != "breath out")   //testoCasella != "breath out"
+                    if (testoCasella != "BREATH OUT")   //testoCasella != "breath out"
                     {
                         opposto2++;
 

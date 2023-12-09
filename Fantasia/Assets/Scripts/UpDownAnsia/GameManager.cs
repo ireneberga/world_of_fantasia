@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        //clust = 0;
-        clust = PlayerPrefs.GetInt("ClusterValue");
+        clust = 0;
+        //clust = PlayerPrefs.GetInt("ClusterValue");
 
         if (clust == 0)
         {
