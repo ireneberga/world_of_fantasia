@@ -1,0 +1,11 @@
+Model Information:
+* title:	Water drinking pool
+* source:	https://sketchfab.com/3d-models/water-drinking-pool-85565ec5894e4fcc8e0f2fe363468b94
+* author:	DJMaesen (https://sketchfab.com/bumstrum)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Water drinking pool" (https://sketchfab.com/3d-models/water-drinking-pool-85565ec5894e4fcc8e0f2fe363468b94) by DJMaesen (https://sketchfab.com/bumstrum) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
