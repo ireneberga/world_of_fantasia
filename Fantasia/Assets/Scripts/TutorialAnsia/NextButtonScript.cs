@@ -27,11 +27,13 @@ public class NextButtonScript : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        //clust = 0;
+        //clust = 2;
         clust = PlayerPrefs.GetInt("ClusterValue");
         age = PlayerPrefs.GetInt("Age");
-        //age = 50;
+        //age = 30;
         username = PlayerPrefs.GetString("Username");
+        
+        Debug.Log(age + "age");
 
 
     }
@@ -78,7 +80,7 @@ public class NextButtonScript : MonoBehaviour
         // Inizializza la lista e aggiungi le tue linee di discorso
         speechLines = new List<string>();
         speechLines.Add(
-            "In the following game the dragon will move up and down according to the rhythm of the breath, try to follow it with the arrows of your board");
+            "In the following game the dragon will move up and down according to the rhythm of the breath, try to follow the writes in the cloud with the arrows of your board");
         TutorialCharacterMovement.active = true;
 
         if (age > 45)
