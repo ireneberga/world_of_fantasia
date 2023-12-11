@@ -38,10 +38,11 @@ public class InteractionPrompt : MonoBehaviour
         words_clust_1 = new string[] { "clust_1_word_1", "clust_1_word_2", "clust_1_word_3" };
         words_clust_2 = new string[] { "clust_2_word_1", "clust_2_word_2", "clust_2_word_3" };
         
-        word1_bool = PlayerPrefs.GetInt("word1");
-        word2_bool = PlayerPrefs.GetInt("word2");
-        word3_bool = PlayerPrefs.GetInt("word3");
+        word1_bool = PlayerPrefs.GetInt("word1",0);
+        word2_bool = PlayerPrefs.GetInt("word2",0);
+        word3_bool = PlayerPrefs.GetInt("word3",0);
         clust = PlayerPrefs.GetInt("ClusterValue");
+        PlayerPrefs.Save();
         ShowPrompt("");
         switch (clust)
         {

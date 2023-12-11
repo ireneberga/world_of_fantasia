@@ -537,14 +537,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: wordContainer
       objectReference: {fileID: 0}
-    - target: {fileID: 526442789869183938, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
-      propertyPath: m_TagString
-      value: wordContainer
-      objectReference: {fileID: 0}
-    - target: {fileID: 526442789869183938, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
-      propertyPath: m_TagString
-      value: wordContainer
-      objectReference: {fileID: 0}
     - target: {fileID: 7782116362102059222, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -1092,15 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 67141867177659370, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
       propertyPath: m_TagString
-      value: wordContainer
-      objectReference: {fileID: 0}
-    - target: {fileID: 67141867177659370, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
-      propertyPath: m_TagString
-      value: wordContainer
-      objectReference: {fileID: 0}
-    - target: {fileID: 67141867177659370, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
-      propertyPath: m_TagString
-      value: wordContainer
+      value: NPC_Word1
       objectReference: {fileID: 0}
     - target: {fileID: 5472397267913507671, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
       propertyPath: m_LocalScale.x
