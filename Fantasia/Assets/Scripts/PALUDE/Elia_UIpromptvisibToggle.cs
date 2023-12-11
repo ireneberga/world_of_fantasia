@@ -19,15 +19,33 @@ public class InteractionPrompt : MonoBehaviour
     public GameObject flower3;
     public GameObject WordsNPC;
     public GameObject Player;
+    private int clust;
     //public TMP_Dropdown drop1;
     //public TMP_Dropdown drop2;
     //public TMP_Dropdown drop3;
     private void Start()
     {
+        clust = PlayerPrefs.GetInt("ClusterValue");
         ShowPrompt("");
+        switch (clust)
+        {
+            case 0:
+                {
+                    break;
+                }
+            case 1:
+                {
+                    break;
+                }
+            case 2:
+                {
+                    break;
+                }
+        }
         wordsToFind = new string[] { "Resilience", "Determination", "Habits" };
         wordsFound = 0;
-        if (GameData.wordsCollected)
+        int currentWordsFound = PlayerPrefs.GetInt("WordsFound", 0);
+        if (currentWordsFound >= 3)
         {
             Cube.SetActive(false);
             Player.transform.position = new Vector3(602, 105, 1082);
@@ -36,9 +54,9 @@ public class InteractionPrompt : MonoBehaviour
             flower3.tag = "retrieved";
             WordsNPC.tag = "Untagged";
         }
-      
+
     }
-        private void Update()
+    private void Update()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
@@ -51,7 +69,7 @@ public class InteractionPrompt : MonoBehaviour
                 ShowPrompt("Press E to Interact");
                 if (Input.GetKey(activateKey))
                 {
-                    wordsFound += 1; 
+                    wordsFound += 1;
                     hit.collider.gameObject.tag = "retrieved";
                     UpdateWordsFound(wordsToFind[wordsFound - 1]);
                 }
@@ -72,44 +90,68 @@ public class InteractionPrompt : MonoBehaviour
                     SceneManager.LoadScene("TutorialAnsia");
                 }
             }
-            else if (hit.collider.CompareTag("speakable"))
+            else if (hit.collider.CompareTag("NPC_Word1"))
             {
-                ShowPrompt("Press E to speak!");
+                ShowPrompt("Press E to speak");
                 if (Input.GetKey(activateKey))
                 {
-                    if (wordsFound >= 3)
+                    SceneManager.LoadScene("scene_word_1", LoadSceneMode.Single);
+                }
+                else if (hit.collider.CompareTag("speakable"))
+                {
+                    ShowPrompt("Press E to speak!");
+                    if (Input.GetKey(activateKey))
                     {
-                        hit.collider.gameObject.tag = "Untagged";
-                        //drop1.gameObject.SetActive(true);
-                        //drop2.gameObject.SetActive(true);
-                        //drop3.gameObject.SetActive(true);
-                        cornerText.gameObject.SetActive(false);
-                        middleText.gameObject.SetActive(false);
-                        GameData.wordsCollected = true;
-                        SceneManager.LoadScene("make_sentence", LoadSceneMode.Single);
-                        //Cursor.visible = true;
-                        //Cursor.lockState = CursorLockMode.None;
-                    }
-                    else
-                    {
-                        ShowPrompt("You need to find more words!");
-                    }
+                        if (wordsFound >= 3)
+                        {
+                            hit.collider.gameObject.tag = "Untagged";
+                            //drop1.gameObject.SetActive(true);
+                            //drop2.gameObject.SetActive(true);
+                            //drop3.gameObject.SetActive(true);
+                            cornerText.gameObject.SetActive(false);
+                            middleText.gameObject.SetActive(false);
+                            //GameData.wordsCollected = true;
+                            SceneManager.LoadScene("make_sentence", LoadSceneMode.Single);
+                            //Cursor.visible = true;
+                            //Cursor.lockState = CursorLockMode.None;
+                        }
+                        else
+                        {
+                            ShowPrompt("You need to find more words!");
+                        }
 
 
+                    }
+                }
+                else
+                {
+                    ShowPrompt("");
                 }
             }
             else
             {
                 ShowPrompt("");
             }
-        }
-        else
-        {
-            ShowPrompt("");
-        }
-        
-    }
 
+        }
+
+        void ShowPrompt(string message)
+        {
+            if (middleText != null && middleText.gameObject.activeSelf)
+            {
+                middleText.text = message;
+            }
+        }
+        void UpdateWordsFound(string message)
+        {
+            if (cornerText != null && cornerText.gameObject.activeSelf)
+            {
+                current_message = current_message + "\n" + message;
+                cornerText.text = current_message;
+            }
+        }
+
+    }
     void ShowPrompt(string message)
     {
         if (middleText != null && middleText.gameObject.activeSelf)
@@ -117,14 +159,5 @@ public class InteractionPrompt : MonoBehaviour
             middleText.text = message;
         }
     }
-    void UpdateWordsFound(string message)
-    {
-        if (cornerText != null && cornerText.gameObject.activeSelf)
-        {
-            current_message = current_message + "\n" + message;
-            cornerText.text = current_message;
-        }
-    }
-
 }
 

@@ -65,7 +65,7 @@ public class sentenceBuilder : MonoBehaviour
     void ChangeScene()
     {
         //SceneManager.LoadScene("PALUDE", LoadSceneMode.Single);
-        SceneManager.LoadScene("PALUDE", LoadSceneMode.Single);
+        SceneManager.LoadScene("PALUDE");//, LoadSceneMode.Single);
     }
 
     void PopulateDropdown()

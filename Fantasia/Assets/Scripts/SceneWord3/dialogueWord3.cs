@@ -10,7 +10,30 @@ public class dialogue3 : MonoBehaviour
     public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
     private List<string> speechLines;
     private int currentLineIndex = 0;
-
+    private int clust;
+    private string word3;
+    private void Awake()
+    {
+        clust = PlayerPrefs.GetInt("ClusterValue");
+        switch (clust)
+        {
+            case 0:
+                {
+                    word3 = "word3 clust 0";
+                    break;
+                }
+            case 1:
+                {
+                    word3 = "word3 clust 1";
+                    break;
+                }
+            case 2:
+                {
+                    word3 = "word3 clust 2";
+                    break;
+                }
+        }
+    }
     private void InitializeSpeechLines()
     {
         // Initialize the list and add your speech lines
@@ -22,7 +45,7 @@ public class dialogue3 : MonoBehaviour
             "The Nothing is the emptiness that surrounds us. It's spreading because people have given up on hoping and forget their own dreams",
             "In order to save Fantasia from the Nothing you have to fight your interiors monsters",
             "In the next page you have to choose the size of the interiors monsters according to the amount of negative influence that have on you",
-            "Later you will face different situations that will help you to fight them and finally save Fantasia. Good luck my friend!"
+            "The word I give you is" + word3 + ", good luck in your journey!"
             // Add additional speech lines here...
         };
     }

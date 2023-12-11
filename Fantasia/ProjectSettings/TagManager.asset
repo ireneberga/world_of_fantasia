@@ -9,6 +9,7 @@ TagManager:
   - speakable
   - wordContainer
   - retrieved
+  - NPC_Word1
   layers:
   - Default
   - TransparentFX

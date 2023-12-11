@@ -995,6 +995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Word1
       objectReference: {fileID: 0}
+    - target: {fileID: 67141867177659370, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
+      propertyPath: m_TagString
+      value: NPC_Word1
+      objectReference: {fileID: 0}
     - target: {fileID: 5472397267913507671, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17
@@ -1125,8 +1129,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 58.94168, y: 27.044321, z: 88.38553}
-  m_Center: {x: -0.89076525, y: 2.5395787, z: 17.676176}
+  m_Size: {x: 24.268171, y: 9.886929, z: 38.34149}
+  m_Center: {x: -0.90228343, y: -6.0391684, z: 8.803858}
 --- !u!1 &999588854
 GameObject:
   m_ObjectHideFlags: 0

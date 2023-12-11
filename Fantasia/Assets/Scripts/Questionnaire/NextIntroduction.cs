@@ -55,7 +55,8 @@ public class NextIntroduction : MonoBehaviour
         // Set ClusterValue in PlayerPrefs
         PlayerPrefs.SetInt("ClusterValue", clusterValue);
         PlayerPrefs.Save();
-
+        //riga aggiunta da Elia, provo a salvare una variabile che serve in palude
+        PlayerPrefs.SetInt("WordsFound", 0);
         // Change to the next scene (replace "YourNextSceneName" with the actual scene name you want to load)
         SceneManager.LoadScene("PALUDE");
     }

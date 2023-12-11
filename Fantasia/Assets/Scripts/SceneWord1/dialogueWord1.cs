@@ -10,7 +10,30 @@ public class dialogue1 : MonoBehaviour
     public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
     private List<string> speechLines;
     private int currentLineIndex = 0;
-
+    private int clust;
+    private string word1;
+    private void Awake()
+    {
+        clust = PlayerPrefs.GetInt("ClusterValue");
+        switch (clust)
+        {
+            case 0:
+                {
+                    word1 = "word1 clust 0";
+                    break;
+                }
+            case 1:
+                {
+                    word1 = "word1 clust 1";
+                    break;
+                }
+            case 2:
+                {
+                    word1 = "word1 clust 2";
+                    break;
+                }
+        }
+    }
     private void InitializeSpeechLines()
     {
         // Initialize the list and add your speech lines
@@ -22,7 +45,7 @@ public class dialogue1 : MonoBehaviour
             "The Nothing is the emptiness that surrounds us. It's spreading because people have given up on hoping and forget their own dreams",
             "In order to save Fantasia from the Nothing you have to fight your interiors monsters",
             "In the next page you have to choose the size of the interiors monsters according to the amount of negative influence that have on you",
-            "Later you will face different situations that will help you to fight them and finally save Fantasia. Good luck my friend!"
+            "This is for you: " + word1 + ". You can do this!"
             // Add additional speech lines here...
         };
     }
@@ -44,8 +67,12 @@ public class dialogue1 : MonoBehaviour
         }
         else
         {
-            // If the speech is complete, move to scene 2
-            SceneManager.LoadScene("MonsterChoicePie"); // Make sure the scene name is correct
+            int currentValue = PlayerPrefs.GetInt("WordsFound", 0);
+            currentValue++;
+            PlayerPrefs.SetInt("WordsFound", currentValue);
+            PlayerPrefs.Save();
+            Debug.Log("Updated WordsFound by dialogueWord1: " + currentValue);
+            SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }
     }
 }
