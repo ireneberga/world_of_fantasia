@@ -209,8 +209,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 11.411273, y: 1.2567344, z: 1.2173556}
-  m_Center: {x: 0.6288919, y: -0.76681817, z: 0.0482248}
+  m_Size: {x: 10.88392, y: 1.2567344, z: 1.2173556}
+  m_Center: {x: 0.8925634, y: -0.76681817, z: 0.04822134}
 --- !u!1 &240289415
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +999,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: NPC_Word1
       objectReference: {fileID: 0}
+    - target: {fileID: 4872555509820635625, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
+      propertyPath: m_TagString
+      value: NPC_Word1
+      objectReference: {fileID: 0}
     - target: {fileID: 5472397267913507671, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17
@@ -1129,8 +1133,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 24.268171, y: 9.886929, z: 38.34149}
-  m_Center: {x: -0.90228343, y: -6.0391684, z: 8.803858}
+  m_Size: {x: 52.32022, y: 16.038658, z: 96.20549}
+  m_Center: {x: 0.49650493, y: -2.963445, z: 27.00768}
 --- !u!1 &999588854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,8 +1234,8 @@ Transform:
   m_GameObject: {fileID: 999588854}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.4730976, z: -0, w: 0.88101}
-  m_LocalPosition: {x: 603.5, y: 102.1, z: 1070.6}
-  m_LocalScale: {x: 5.2868, y: 16.195843, z: 18.33592}
+  m_LocalPosition: {x: 608.51, y: 103.74, z: 1063.04}
+  m_LocalScale: {x: 3.3591797, y: 31.265774, z: 31.211405}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1381,7 +1385,7 @@ Transform:
   m_GameObject: {fileID: 1095855152}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9995757, z: -0, w: 0.029130649}
-  m_LocalPosition: {x: 596.8, y: 102, z: 1130}
+  m_LocalPosition: {x: 701.87, y: 104.98, z: 1480.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2753,7 +2757,7 @@ Transform:
   m_GameObject: {fileID: 2016828374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 602.39, y: 100.85, z: 1082.79}
+  m_LocalPosition: {x: 602.39, y: 103.356, z: 1082.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

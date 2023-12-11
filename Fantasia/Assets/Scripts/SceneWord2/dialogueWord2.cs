@@ -14,6 +14,8 @@ public class dialogue2: MonoBehaviour
     private string word2;
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         clust = PlayerPrefs.GetInt("ClusterValue");
         switch (clust)
         {

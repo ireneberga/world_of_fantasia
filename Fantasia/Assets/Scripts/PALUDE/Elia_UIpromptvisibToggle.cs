@@ -95,45 +95,41 @@ public class InteractionPrompt : MonoBehaviour
                 ShowPrompt("Press E to speak");
                 if (Input.GetKey(activateKey))
                 {
-                    SceneManager.LoadScene("scene_word_1", LoadSceneMode.Single);
-                }
-                else if (hit.collider.CompareTag("speakable"))
-                {
-                    ShowPrompt("Press E to speak!");
-                    if (Input.GetKey(activateKey))
-                    {
-                        if (wordsFound >= 3)
-                        {
-                            hit.collider.gameObject.tag = "Untagged";
-                            //drop1.gameObject.SetActive(true);
-                            //drop2.gameObject.SetActive(true);
-                            //drop3.gameObject.SetActive(true);
-                            cornerText.gameObject.SetActive(false);
-                            middleText.gameObject.SetActive(false);
-                            //GameData.wordsCollected = true;
-                            SceneManager.LoadScene("make_sentence", LoadSceneMode.Single);
-                            //Cursor.visible = true;
-                            //Cursor.lockState = CursorLockMode.None;
-                        }
-                        else
-                        {
-                            ShowPrompt("You need to find more words!");
-                        }
-
-
-                    }
-                }
-                else
-                {
-                    ShowPrompt("");
+                    SceneManager.LoadScene("scene_word_1");
                 }
             }
-            else
+            else if (hit.collider.CompareTag("speakable"))
             {
-                ShowPrompt("");
-            }
+                ShowPrompt("Press E to speak!");
+                if (Input.GetKey(activateKey))
+                {
+                    if (wordsFound >= 3)
+                    {
+                        hit.collider.gameObject.tag = "Untagged";
+                        //drop1.gameObject.SetActive(true);
+                        //drop2.gameObject.SetActive(true);
+                        //drop3.gameObject.SetActive(true);
+                        cornerText.gameObject.SetActive(false);
+                        middleText.gameObject.SetActive(false);
+                        //GameData.wordsCollected = true;
+                        SceneManager.LoadScene("make_sentence", LoadSceneMode.Single);
+                        //Cursor.visible = true;
+                        //Cursor.lockState = CursorLockMode.None;
+                    }
+                    else
+                    {
+                        ShowPrompt("You need to find more words!");
+                    }
 
+
+                }
+            }
+            }
+        else
+        {
+            ShowPrompt("");
         }
+    }
 
         void ShowPrompt(string message)
         {
@@ -151,13 +147,25 @@ public class InteractionPrompt : MonoBehaviour
             }
         }
 
-    }
+}
+/*
     void ShowPrompt(string message)
     {
         if (middleText != null && middleText.gameObject.activeSelf)
         {
             middleText.text = message;
         }
+    }*/
+/* qursto era lo script di scenetransitioner
+using UnityEngine;
+public class GameData : MonoBehaviour
+{
+    public static bool wordsCollected = false;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
     }
-}
+
+*/
 
