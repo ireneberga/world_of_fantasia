@@ -97,6 +97,7 @@ public class InteractionPrompt : MonoBehaviour
                 {
                     SceneManager.LoadScene("scene_word_1");
                 }
+            }
             else if (hit.collider.CompareTag("speakable"))
             {
                 ShowPrompt("Press E to speak!");
@@ -123,12 +124,12 @@ public class InteractionPrompt : MonoBehaviour
 
                 }
             }
-            else
-            {
-                ShowPrompt("");
             }
-            }
+        else
+        {
+            ShowPrompt("");
         }
+    }
 
         void ShowPrompt(string message)
         {
@@ -146,13 +147,25 @@ public class InteractionPrompt : MonoBehaviour
             }
         }
 
-    }
+}
+/*
     void ShowPrompt(string message)
     {
         if (middleText != null && middleText.gameObject.activeSelf)
         {
             middleText.text = message;
         }
+    }*/
+/* qursto era lo script di scenetransitioner
+using UnityEngine;
+public class GameData : MonoBehaviour
+{
+    public static bool wordsCollected = false;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
     }
-}
+
+*/
 
