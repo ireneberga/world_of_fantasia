@@ -95,44 +95,39 @@ public class InteractionPrompt : MonoBehaviour
                 ShowPrompt("Press E to speak");
                 if (Input.GetKey(activateKey))
                 {
-                    SceneManager.LoadScene("scene_word_1", LoadSceneMode.Single);
+                    SceneManager.LoadScene("scene_word_1");
                 }
-                else if (hit.collider.CompareTag("speakable"))
+            else if (hit.collider.CompareTag("speakable"))
+            {
+                ShowPrompt("Press E to speak!");
+                if (Input.GetKey(activateKey))
                 {
-                    ShowPrompt("Press E to speak!");
-                    if (Input.GetKey(activateKey))
+                    if (wordsFound >= 3)
                     {
-                        if (wordsFound >= 3)
-                        {
-                            hit.collider.gameObject.tag = "Untagged";
-                            //drop1.gameObject.SetActive(true);
-                            //drop2.gameObject.SetActive(true);
-                            //drop3.gameObject.SetActive(true);
-                            cornerText.gameObject.SetActive(false);
-                            middleText.gameObject.SetActive(false);
-                            //GameData.wordsCollected = true;
-                            SceneManager.LoadScene("make_sentence", LoadSceneMode.Single);
-                            //Cursor.visible = true;
-                            //Cursor.lockState = CursorLockMode.None;
-                        }
-                        else
-                        {
-                            ShowPrompt("You need to find more words!");
-                        }
-
-
+                        hit.collider.gameObject.tag = "Untagged";
+                        //drop1.gameObject.SetActive(true);
+                        //drop2.gameObject.SetActive(true);
+                        //drop3.gameObject.SetActive(true);
+                        cornerText.gameObject.SetActive(false);
+                        middleText.gameObject.SetActive(false);
+                        //GameData.wordsCollected = true;
+                        SceneManager.LoadScene("make_sentence", LoadSceneMode.Single);
+                        //Cursor.visible = true;
+                        //Cursor.lockState = CursorLockMode.None;
                     }
-                }
-                else
-                {
-                    ShowPrompt("");
+                    else
+                    {
+                        ShowPrompt("You need to find more words!");
+                    }
+
+
                 }
             }
             else
             {
                 ShowPrompt("");
             }
-
+            }
         }
 
         void ShowPrompt(string message)
