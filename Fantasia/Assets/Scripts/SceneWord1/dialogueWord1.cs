@@ -72,6 +72,8 @@ public class dialogue1 : MonoBehaviour
             int currentValue = PlayerPrefs.GetInt("WordsFound", 0);
             currentValue++;
             PlayerPrefs.SetInt("WordsFound", currentValue);
+            PlayerPrefs.SetInt("word1", 1);
+
             PlayerPrefs.Save();
             Debug.Log("Updated WordsFound by dialogueWord1: " + currentValue);
             SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct

@@ -20,25 +20,50 @@ public class InteractionPrompt : MonoBehaviour
     public GameObject WordsNPC;
     public GameObject Player;
     private int clust;
+    private int word1_bool;
+    private int word2_bool;
+    private int word3_bool;
+    private string word1_string;
+    private string word2_string;
+    private string word3_string;
+    private string[] words_clust_0;
+    private string[] words_clust_1;
+    private string[] words_clust_2;
     //public TMP_Dropdown drop1;
     //public TMP_Dropdown drop2;
     //public TMP_Dropdown drop3;
     private void Start()
     {
+        words_clust_0 = new string[] { "clust_0_word_1", "clust_0_word_2", "clust_0_word_3" };
+        words_clust_1 = new string[] { "clust_1_word_1", "clust_1_word_2", "clust_1_word_3" };
+        words_clust_2 = new string[] { "clust_2_word_1", "clust_2_word_2", "clust_2_word_3" };
+        
+        word1_bool = PlayerPrefs.GetInt("word1");
+        word2_bool = PlayerPrefs.GetInt("word2");
+        word3_bool = PlayerPrefs.GetInt("word3");
         clust = PlayerPrefs.GetInt("ClusterValue");
         ShowPrompt("");
         switch (clust)
         {
             case 0:
                 {
+                    word1_string = words_clust_0[0];
+                    word2_string = words_clust_0[1];
+                    word3_string = words_clust_0[2];
                     break;
                 }
             case 1:
                 {
+                    word1_string = words_clust_1[0];
+                    word2_string = words_clust_1[1];
+                    word3_string = words_clust_1[2];
                     break;
                 }
             case 2:
                 {
+                    word1_string = words_clust_2[0];
+                    word2_string = words_clust_2[1];
+                    word3_string = words_clust_2[2];
                     break;
                 }
         }
@@ -92,11 +117,19 @@ public class InteractionPrompt : MonoBehaviour
             }
             else if (hit.collider.CompareTag("NPC_Word1"))
             {
-                ShowPrompt("Press E to speak");
-                if (Input.GetKey(activateKey))
+                if (word1_bool == 1)
                 {
-                    SceneManager.LoadScene("scene_word_1");
+                    ShowPrompt("You already spoke with me!");
                 }
+                else
+                {
+                    ShowPrompt("Press E to speak");
+                    if (Input.GetKey(activateKey))
+                    {
+                        SceneManager.LoadScene("scene_word_1");
+                    }
+                }
+                
             }
             else if (hit.collider.CompareTag("speakable"))
             {
