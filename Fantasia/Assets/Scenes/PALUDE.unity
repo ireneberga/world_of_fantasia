@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -535,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 526442789869183938, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
       propertyPath: m_TagString
-      value: wordContainer
+      value: NPC_Word2
       objectReference: {fileID: 0}
     - target: {fileID: 7782116362102059222, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
       propertyPath: m_LocalScale.x
@@ -850,11 +850,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6266553642671720895, guid: 0e55a8df6d0c21248b876680fb7d7eb2, type: 3}
       propertyPath: m_Name
-      value: Molehill
+      value: NPC_Word3
       objectReference: {fileID: 0}
     - target: {fileID: 6266553642671720895, guid: 0e55a8df6d0c21248b876680fb7d7eb2, type: 3}
       propertyPath: m_TagString
-      value: wordContainer
+      value: NPC_Word3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1084,11 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 67141867177659370, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
       propertyPath: m_TagString
-<<<<<<< Updated upstream
       value: NPC_Word1
-=======
-      value: wordContainer
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5472397267913507671, guid: 8f950a10d9ee05e4f9a753b831dd5151, type: 3}
       propertyPath: m_LocalScale.x
@@ -1472,7 +1468,7 @@ Transform:
   m_GameObject: {fileID: 1095855152}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9995757, z: -0, w: 0.029130649}
-  m_LocalPosition: {x: 701.87, y: 104.98, z: 1480.77}
+  m_LocalPosition: {x: 558, y: 105, z: 1205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1492,7 +1488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320d3504c78141445abf8ca9776a9073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 20
+  walkSpeed: 50
   sprintSpeed: 13
   groundDrag: 7
   jumpForce: 9
@@ -2546,7 +2542,6 @@ MonoBehaviour:
   interactionRange: 5
   activateKey: 101
   wordsToFind: []
-  wordsFound: 0
   cornerText: {fileID: 240289416}
   middleText: {fileID: 1883175989}
   Cube: {fileID: 999588854}
@@ -3026,6 +3021,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 120, y: 100, z: 108}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2114945232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114945234}
+  - component: {fileID: 2114945233}
+  m_Layer: 0
+  m_Name: PlayerLocationMemory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2114945233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114945232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bdd0e5d1fe9d749ab9b36a861991d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2114945234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114945232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 633.8366, y: 145.31003, z: 1436.2261}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3053,3 +3092,4 @@ SceneRoots:
   - {fileID: 538945198}
   - {fileID: 700585729}
   - {fileID: 832724823}
+  - {fileID: 2114945234}
