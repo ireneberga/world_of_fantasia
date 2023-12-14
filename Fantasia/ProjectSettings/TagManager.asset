@@ -10,6 +10,8 @@ TagManager:
   - wordContainer
   - retrieved
   - NPC_Word1
+  - NPC_Word3
+  - NPC_Word2
   layers:
   - Default
   - TransparentFX
