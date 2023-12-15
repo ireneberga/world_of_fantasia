@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -156,12 +155,6 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
-    }
-    void OnDestroy()
-    {
-        // Save player position when leaving the scene
-        PlayerPositionManager.SavePlayerPosition(transform.position);
-        Debug.Log("PlayerMovement saved the position before destroy: " + transform.position);
     }
     /*private void SetPlayerPosition()
     {
