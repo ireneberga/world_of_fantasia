@@ -41,12 +41,20 @@ public class dialogue3 : MonoBehaviour
         // Initialize the list and add your speech lines
         speechLines = new List<string>
         {
-            "Hi I'm the THIRD CHARACTER!",
-            "Welcome to Fantasia, or better to say, what is left...",
-            "The Nothing is destroying this wonderful world",
-            "The Nothing is the emptiness that surrounds us. It's spreading because people have given up on hoping and forget their own dreams",
-            "In order to save Fantasia from the Nothing you have to fight your interiors monsters",
-            "In the next page you have to choose the size of the interiors monsters according to the amount of negative influence that have on you",
+            "Who is there?I can’t see you, because as you can see I'm blind.",
+            "Anyway, whoever you are, let me introduce myself: I am the blind mole, one of the spirits that rules this wasteland.",
+            "I live in eternal darkness, without ever having been able to see the light of day.",
+            "It is a deep desire, to be able to see the wonders of the world that others describe, which unfortunately life has denied me.",
+            "Precisely for this reason I had to learn to discover the world through other senses.",
+            "However, my dear traveller, I want to ask you a question: is it enough to have sight to not be blind?",
+            "Over time I realized that many people, despite having sight, are actually blinder than me:",
+            "although their eyes can capture the beauty, denied to me, they often lack the ability to appreciate what is in front of them.",
+            "In fact, many get lost in their daily routine, in the anxieties of the future or in the regrets of the past,",
+            "without ever raising their eyes to enjoy the beauties that life offers them in the present.",
+            "My dear traveller, don't make the same mistake:",
+            "free your gaze from the chains of indifference and habit and learn to find joy in details, to be amazed",
+            "by the small daily miracles and to immerse yourself in the emotions that the world has to offer.",
+            "Look beyond the surface, and you will discover that even the most common things hide a treasure of beauty!",
             "The word I give you is" + word3 + ", good luck in your journey!"
             // Add additional speech lines here...
         };
