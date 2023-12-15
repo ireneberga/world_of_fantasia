@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Fantasia/Assets/Freeui/ZOSMA/Main/Back.meta
+guid: 9060be31a24ecef41b91ce7261225129
+folderAsset: yes
+========
 guid: 71b3d3c06689cfd4b8ef85d74499583c
+>>>>>>>> 3ec1ce61276a761857504e9be2eca635440a7c0b:Fantasia/Assets/Scenes/beforeAnsia.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
