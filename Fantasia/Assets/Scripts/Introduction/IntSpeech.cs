@@ -45,7 +45,7 @@ public class IntSpeech : MonoBehaviour
         else
         {
             // If the speech is complete, move to scene 2
-            SceneManager.LoadScene("MonsterChoicePie"); // Make sure the scene name is correct
+            SceneManager.LoadScene("TutorialAnsia");
         }
     }
 }
