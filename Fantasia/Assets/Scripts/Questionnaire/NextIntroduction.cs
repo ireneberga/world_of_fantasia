@@ -6,22 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class NextIntroduction : MonoBehaviour
 {
-    int anxiety;
-    int depression;
-    int age;
-
     int clusterSum;
     int clusterValue;
 
-    private void Awake()
-    {
-        anxiety = PlayerPrefs.GetInt("AnxietyMultiplier1");
-        depression = PlayerPrefs.GetInt("DepreMultiplier1");
-        age = PlayerPrefs.GetInt("Age");
-    }
+    public Image targetImage_d;
+    private int depreMultiplier;
+
+    public Image targetImage1;
+    private int anxietyMultiplier;
 
     private void Start()
-    {
+    {   
+        depreMultiplier = PlayerPrefs.GetInt("ScaleMultiplier", 1);
+        ApplyScaleDepre();
+        anxietyMultiplier = PlayerPrefs.GetInt("ScaleMultiplier", 1);
+        ApplyScaleAnxiety();
         // Add button click listener
         Button button = GetComponent<Button>();
         if (button != null)
@@ -30,10 +29,26 @@ public class NextIntroduction : MonoBehaviour
         }
     }
 
+    public void OnButtonAnx (int newScaleMultiplier_a)
+    {
+        anxietyMultiplier = newScaleMultiplier_a;
+        Debug.Log("AnxietyMultiplier: " + anxietyMultiplier);
+
+        ApplyScaleAnxiety();
+    }
+
+    public void OnButtonDep (int newScaleMultiplier_d)
+    {
+        depreMultiplier = newScaleMultiplier_d;
+        Debug.Log("DepreMultiplier1: " + depreMultiplier);
+
+        ApplyScaleDepre();
+    }
+
     public void OnButtonPressed()
     {
         // Calculate clusterSum
-        clusterSum = anxiety + depression;
+        clusterSum = anxietyMultiplier + depreMultiplier;
 
         // Calculate clusterValue based on clusterSum
         if (clusterSum <= 1)
@@ -54,15 +69,35 @@ public class NextIntroduction : MonoBehaviour
         Debug.Log("Cluster Value: " + clusterValue);
         // Set ClusterValue in PlayerPrefs
         PlayerPrefs.SetInt("ClusterValue", clusterValue);
+        PlayerPrefs.SetInt("DepreMultiplier1", depreMultiplier);
+        PlayerPrefs.SetInt("AnxietyMultiplier1", anxietyMultiplier);
         
-        //riga aggiunta da Elia, provo a salvare variabili che servono in palude
+        //riga aggiunta da Elia, provo a salvare una variabile che serve in palude
         PlayerPrefs.SetInt("WordsFound", 0);
-        PlayerPrefs.SetInt("Word1", 0);
-        PlayerPrefs.SetInt("Word2", 0);
-        PlayerPrefs.SetInt("Word3", 0);
+        PlayerPrefs.SetInt("word1", 0);
+        PlayerPrefs.SetInt("word2", 0);
+        PlayerPrefs.SetInt("word3", 0);
         // Change to the next scene (replace "YourNextSceneName" with the actual scene name you want to load)
         PlayerPrefs.Save();
         SceneManager.LoadScene("PALUDE");
+    }
+
+    private void ApplyScaleAnxiety()
+    {
+        if(targetImage1 != null)
+        {
+            Vector3 newScale = new Vector3(anxietyMultiplier*0.5f + 0.5f, anxietyMultiplier*0.5f + 0.5f, 1f);
+            targetImage1.rectTransform.localScale = newScale;
+        }
+    }
+
+    private void ApplyScaleDepre()
+    {
+        if(targetImage_d != null)
+        {
+            Vector3 newScale = new Vector3(depreMultiplier*0.5f + 0.5f, depreMultiplier*0.5f + 0.5f, 1f);
+            targetImage_d.rectTransform.localScale = newScale;
+        }
     }
 }
 

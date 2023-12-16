@@ -1223,10 +1223,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 912112518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 119}
-  m_SizeDelta: {x: 900, y: 97.2291}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.000026703, y: -63}
+  m_SizeDelta: {x: 775.913, y: 78.3797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1422570303
 MonoBehaviour:
@@ -1240,9 +1240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d84f724bb734a49ab4c7a405d556d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curveIntensity: 0.1
-  curveSpeed: 1
-  textMeshPro: {fileID: 0}
 --- !u!114 &1422570304
 MonoBehaviour:
   m_ObjectHideFlags: 0

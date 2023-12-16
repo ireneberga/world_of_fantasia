@@ -16,13 +16,13 @@ public class IntSpeech : MonoBehaviour
         // Initialize the list and add your speech lines
         speechLines = new List<string>
         {
-            "Hi I'm Falkor the Luck Dragon!",
+            "Hi! I'm Falkor the Luck Dragon!",
             "Welcome to Fantasia, or better to say, what is left...",
             "The Nothing is destroying this wonderful world",
-            "The Nothing is the emptiness that surrounds us. It's spreading because people have given up on hoping and forget their own dreams",
+            "The Nothing is the emptiness that surrounds us. It's spreading because people have given up on hoping and are forgetting their own dreams",
             "In order to save Fantasia from the Nothing you have to fight your interiors monsters",
-            "In the next page you have to choose the size of the interiors monsters according to the amount of negative influence that have on you",
-            "Later you will face different situations that will help you to fight them and finally save Fantasia. Good luck my friend!"
+            "In the next page you'll have to choose the size of the interiors monsters according to the amount of negative influence that they have on you",
+            "Later, you will face different situations that will help you to fight them and finally save Fantasia. Good luck my friend!"
             // Add additional speech lines here...
         };
     }
