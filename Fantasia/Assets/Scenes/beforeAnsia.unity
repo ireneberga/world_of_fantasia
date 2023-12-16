@@ -658,7 +658,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1169008551}
-        m_TargetAssemblyTypeName: IntSpeech, Assembly-CSharp
+        m_TargetAssemblyTypeName: beforeAnsiaSpeech, Assembly-CSharp
         m_MethodName: ShowTextOnClick
         m_Mode: 1
         m_Arguments:
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1169008547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5930def401236884183d75aca6b0c8e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 339beeba5f558504e9fde5cb59fa1a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textField: {fileID: 1070563463}

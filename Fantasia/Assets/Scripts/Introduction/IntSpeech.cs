@@ -16,7 +16,7 @@ public class IntSpeech : MonoBehaviour
         // Initialize the list and add your speech lines
         speechLines = new List<string>
         {
-            "Hi I'm Falkor the Luck Dragon!",
+            "introduction",
             "Welcome to Fantasia, or better to say, what is left...",
             "The Nothing is destroying this wonderful world",
             "The Nothing is the emptiness that surrounds us. It's spreading because people have given up on hoping and forget their own dreams",
@@ -45,7 +45,7 @@ public class IntSpeech : MonoBehaviour
         else
         {
             // If the speech is complete, move to scene 2
-            SceneManager.LoadScene("TutorialAnsia");
+            SceneManager.LoadScene("MonsterChoicePie");
         }
     }
 }

@@ -11,6 +11,8 @@ public class CharacterFluctuation : MonoBehaviour
     void Start()
     {
         // Save the original position of the character
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         originalPosition = transform.position;
     }
 

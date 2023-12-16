@@ -33,7 +33,7 @@ public class beforeAnsiaSpeech : MonoBehaviour
         // Initialize the list and add your speech lines
         speechLines = new List<string>
         {
-            "You have been great! you should be proud of you!",
+            "Before ansia",
             "Now you have improved on managing sadness",
             "you should think about how your lifestyle can improve from now on!",
             "take a little time to rest rest because in the following game you will fight the interior monster of anxiety and you will learn how to manage it",
@@ -70,7 +70,7 @@ public class beforeAnsiaSpeech : MonoBehaviour
         else
         {
             // If the speech is complete, move to scene 2
-            SceneManager.LoadScene("Monster"); // Make sure the scene name is correct
+            SceneManager.LoadScene("TutorialAnsia"); // Make sure the scene name is correct
         }
     }
 }

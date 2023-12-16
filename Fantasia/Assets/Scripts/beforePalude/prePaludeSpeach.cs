@@ -60,7 +60,7 @@ public class prePaludeSpeach : MonoBehaviour
         // medium level of depression, hihgh level of anxiety. Age 25
         speechLines = new List<string>
         {
-            "Look, you identified your interiors monsters and Fantasia is already getting better!",
+            "PRE PALUDE!",
             "The trees are growing again! Who knows the improvements that you can get going on in your journey...",
             "Now you will enter in the swamp of sadness",
             "you will learn managing some situations and always looking for something positive!",
@@ -106,7 +106,7 @@ public class prePaludeSpeach : MonoBehaviour
         else
         {
             // If the speech is complete, move to scene 2
-            SceneManager.LoadScene("Monster"); // Make sure the scene name is correct
+            SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }
     }
 }
