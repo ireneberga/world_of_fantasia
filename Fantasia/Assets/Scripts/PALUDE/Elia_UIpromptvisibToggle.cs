@@ -47,7 +47,7 @@ public class InteractionPrompt : MonoBehaviour
         word1_bool = PlayerPrefs.GetInt("Word1",0);
         word2_bool = PlayerPrefs.GetInt("Word2",0);
         word3_bool = PlayerPrefs.GetInt("Word3",0);
-        UpdateWordsFound();
+        
         clust = PlayerPrefs.GetInt("ClusterValue");
         Debug.Log("parole trovate: " + word1_bool + " " + word2_bool + " " + word3_bool);
         PlayerPrefs.Save();
@@ -89,6 +89,7 @@ public class InteractionPrompt : MonoBehaviour
             //flower3.tag = "retrieved";
             //WordsNPC.tag = "Untagged";
         }
+        UpdateWordsFound();
 
     }
     private void Update()
