@@ -65,7 +65,7 @@ public class sentenceBuilder : MonoBehaviour
         drop2.onValueChanged.AddListener(delegate { UpdateSentence(); });
         drop3.onValueChanged.AddListener(delegate { UpdateSentence(); });
         Button.onClick.AddListener(delegate { ChangeScene(); });
-        
+
         UpdateSentence();
     }
     void UpdateSentence()
@@ -89,7 +89,7 @@ public class sentenceBuilder : MonoBehaviour
             Button.enabled = false;
             GameObject.Find("Button").GetComponentInChildren<Text>().text = "";
         }
-            
+
     }
     void ChangeScene()
     {
@@ -107,7 +107,7 @@ public class sentenceBuilder : MonoBehaviour
         {
             case 0:
                 {
-                    options = new string[] { "          ", "surrender", word1_string, "reluctance", word2_string, word3_string, "pessimism", "cinicism" }; 
+                    options = new string[] { "          ", "surrender", word1_string, "reluctance", word2_string, word3_string, "pessimism", "cinicism" };
                     rightWords = new string[] { "resilience", "determination", "habits" };
                     sentencePieces = new string[] { "Cluster 0: Despite facing challenges, you have shown incredible", "in your journey. Your commitment to seeking support is a powerful demonstration of your", "for a brighter future. Embracing positive", ", such as gratitude and self-compassion, can significantly contribute to your overall well-being." };
                     break;

@@ -41,12 +41,19 @@ public class dialogue2: MonoBehaviour
         // Initialize the list and add your speech lines
         speechLines = new List<string>
         {
-            "Hi I'm the SECOND CHARACTER!",
-            "Welcome to Fantasia, or better to say, what is left...",
-            "The Nothing is destroying this wonderful world",
-            "The Nothing is the emptiness that surrounds us. It's spreading because people have given up on hoping and forget their own dreams",
-            "In order to save Fantasia from the Nothing you have to fight your interiors monsters",
-            "In the next page you have to choose the size of the interiors monsters according to the amount of negative influence that have on you",
+            "Hi brave wanderer, I am the frog of the well, one of the spirits that governs this wasteland!",
+            "I want to share my story with you, hoping that it can illuminate your path.",
+            "For a long time I lived at the bottom of this well.",
+            "I didn't need anything else, I was happy confined within the walls of my little refuge, ",
+            "protected from the dangers of the outside world and from people's gazes.",
+            "However, one day a violent storm flooded my refuge, and I was pushed out into that vast world ",
+            "beyond the narrow walls of my well that I feared so much.",
+            "It was then that I realized what I had been missing until that moment: I heard colors, sounds and smells that I never imagined could exist.",
+            "I met extraordinary creatures, each bringing a unique set of experiences!",
+            "I understood the importance of exploring and connecting with the world around me and the desire to know and understand became the driving force of my existence.",
+            "My dear traveller, don't make the same mistake as me:",
+            "don't stay confined within your inner walls, open up to the outside world, meet new people, new places, new points of view, LIVE!",
+            "Remember: How can a frog in a well understand how vast the ocean is?",
             "This is mymessage:" + word2 + ". Good luck my friend!"
             // Add additional speech lines here...
         };
@@ -72,10 +79,10 @@ public class dialogue2: MonoBehaviour
             int currentValue = PlayerPrefs.GetInt("WordsFound", 0);
             currentValue++;
             PlayerPrefs.SetInt("WordsFound", currentValue);
-            PlayerPrefs.SetInt("word2", 1);
+            PlayerPrefs.SetInt("Word2", 1);
 
             PlayerPrefs.Save();
-            // If the speech is complete, move to scene 2
+            Debug.Log("Updated WordsFound by dialogueWord2: " + currentValue);
             SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }
     }
