@@ -98,7 +98,7 @@ public class sentenceBuilder : MonoBehaviour
         PlayerPrefs.SetInt("WordsFound", currentValue);
         PlayerPrefs.Save();
         //SceneManager.LoadScene("PALUDE", LoadSceneMode.Single);
-        SceneManager.LoadScene("PALUDE");//, LoadSceneMode.Single);
+        SceneManager.LoadScene("beforeAnsia");//, LoadSceneMode.Single);
     }
 
     void PopulateDropdown()

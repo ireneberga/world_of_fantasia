@@ -60,7 +60,10 @@ public class NextIntroduction : MonoBehaviour
         PlayerPrefs.SetInt("Word1", 0);
         PlayerPrefs.SetInt("Word2", 0);
         PlayerPrefs.SetInt("Word3", 0);
-        // Change to the next scene (replace "YourNextSceneName" with the actual scene name you want to load)
+
+        PlayerPrefs.SetFloat("lastLocationX", 508);
+        PlayerPrefs.SetFloat("lastLocationY", 102);
+        PlayerPrefs.SetFloat("lastLocationZ", 1965);
         PlayerPrefs.Save();
         SceneManager.LoadScene("PALUDE");
     }
