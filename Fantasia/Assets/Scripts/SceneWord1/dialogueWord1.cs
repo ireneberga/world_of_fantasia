@@ -7,7 +7,7 @@ using TMPro;
 
 public class dialogue1 : MonoBehaviour
 {
-    public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
+    public TextMeshProUGUI textField;
     private List<string> speechLines;
     private int currentLineIndex = 0;
     private int clust;
@@ -72,7 +72,7 @@ public class dialogue1 : MonoBehaviour
             int currentValue = PlayerPrefs.GetInt("WordsFound", 0);
             currentValue++;
             PlayerPrefs.SetInt("WordsFound", currentValue);
-            PlayerPrefs.SetInt("word1", 1);
+            PlayerPrefs.SetInt("Word1", 1);
 
             PlayerPrefs.Save();
             Debug.Log("Updated WordsFound by dialogueWord1: " + currentValue);
