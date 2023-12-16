@@ -9,33 +9,59 @@ public class finalSpeech : MonoBehaviour
     public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
     private List<string> speechLines;
     private int currentLineIndex = 0;
-    private float age = 35;
     
-    //age = PlayerPrefs.GetFloat("Age");
-    private void InitializeSpeechLinesold()
+    private int clust; 
+    
+    private void Awake()
     {
-        // Initialize the list and add your speech lines
-        speechLines = new List<string>
-        {
-            "I hope you feel better now! You have defeated your interior monsters!",
-            "Your journey has come to an end and you have saved Fantasia!",
-            "Remember the person that you were before, appreciate what you have learnt and give you the possibility of a new start",
-            "Remember, whenever you need me I'll be here",
-            "Good luck my friend!",
-            
-            
-        };
+        clust = 0;
+        //clust = PlayerPrefs.GetInt("ClusterValue");
+
+        
     }
     
-    private void InitializeSpeechLinesyoung()
+    //age = PlayerPrefs.GetFloat("Age");
+    private void InitializeSpeechLineszero()
     {
         // Initialize the list and add your speech lines
         speechLines = new List<string>
         {
             "I hope you feel better now! You have defeated your interior monsters!",
             "Your journey has come to an end and you have saved Fantasia!",
-            "Think about all the improvements that you have done and what you have learnt",
-            "you have all life ahead you to put them in practice",
+            "Think about the experience that you have done, appreciate what you have learnt and put it in practice in your daily life",
+            "May look like little changes but will improve your life and the one of people that are around you",
+            "Remember, whenever you need me I'll be here",
+            "Good luck my friend!",
+
+
+        };
+    }
+
+    private void InitializeSpeechLinesuno()
+        {
+                // Initialize the list and add your speech lines
+                speechLines = new List<string>
+            {
+              "I hope you feel better now! You have defeated your interior monsters!",
+              "Your journey has come to an end and you have saved Fantasia!", 
+              "Remember the person that you were before, appreciate what you have learnt and give you the possibility of a new start",
+              "Put in practice what you have learnt and your life and the one of people that are around you will improve",
+              "Remember, whenever you need me I'll be here", 
+              "Good luck my friend!",
+                
+                
+            };
+        }
+    
+    private void InitializeSpeechLinesdue()
+    {
+        // Initialize the list and add your speech lines
+        speechLines = new List<string>
+        {
+            "I hope you feel better now! You have defeated your interior monsters!",
+            "Your journey has come to an end and you have saved Fantasia!",
+            "Remember the person that you were before and appreciate what you have learnt",
+            "you have all life ahead to put it in practice and to succeed in the challenges that will present",
             "Remember, whenever you need me I'll be here",
             "Good luck my friend!",
             
@@ -47,15 +73,22 @@ public class finalSpeech : MonoBehaviour
         // Check if there are still lines in the speech
         if (currentLineIndex == 0)
         {
-            if (age > 45)
+            if (clust == 0)
             {
-                InitializeSpeechLinesold();
+                InitializeSpeechLineszero();
+                textField.text = speechLines[currentLineIndex];
+                currentLineIndex++;
+            
+            }
+            else if (clust == 1)
+            {
+                InitializeSpeechLinesuno();
                 textField.text = speechLines[currentLineIndex];
                 currentLineIndex++;
             }
             else
             {
-                InitializeSpeechLinesyoung();
+                InitializeSpeechLinesdue();
                 textField.text = speechLines[currentLineIndex];
                 currentLineIndex++;
             }
