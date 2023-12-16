@@ -27,6 +27,7 @@ public class AudioController : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) ||
             Input.GetKey(KeyCode.RightArrow))
         {
+           
             if (oggettoDaControllare != null)
             {
                 float coordinataY = oggettoDaControllare.transform.position.y;
@@ -34,19 +35,19 @@ public class AudioController : MonoBehaviour
                 // In base al valore della coordinata y, scegli l'audio da riprodurre
                 if (coordinataY > 101.45)
                 {
-                    Debug.Log("terra");
+                    
                     terrain = 0;
                 }
 
                 if (coordinataY < 101.45 && coordinataY > 100.6)
                 {
-                    Debug.Log("akua");
+                    
                     terrain = 1;
                 }
 
                 if (coordinataY <= 100.5)
                 {
-                    Debug.Log("profonda");
+                    
                     terrain = 2;
                 }
             }
@@ -56,6 +57,7 @@ public class AudioController : MonoBehaviour
         {
             previousTerrain = terrain;
             //cambia audioclip
+            _audioSource.loop = true;
             if (terrain == 0)
             {
                 PlayAudio(audioClip1);
@@ -69,8 +71,38 @@ public class AudioController : MonoBehaviour
                 PlayAudio(audioClip3);
             }
         }
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) ||
+            Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            
+
+            // Aggiungi il controllo sulla coordinata y dell'oggetto
+            if (oggettoDaControllare != null)
+            {
+                float coordinataY = oggettoDaControllare.transform.position.y;
+
+                // In base al valore della coordinata y, scegli l'audio da riprodurre
+                if (coordinataY > 101.45)
+                {
+                    PlayAudio(audioClip1); // Riproduci il primo audio
+                    
+                }
+
+                if (coordinataY < 101.45 && coordinataY > 100.6)
+                {
+
+                    PlayAudio(audioClip2); // Riproduci il secondo audio
+                    
+                }
+
+                if (coordinataY <= 100.5)
+                {
+                    PlayAudio(audioClip3);
+                    
+                }
+            }
+        }
         
-        _audioSource.loop = true;
         
         // Verifica se il tasto è stato rilasciato
      if (!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) &&

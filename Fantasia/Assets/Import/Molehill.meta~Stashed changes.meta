@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: d894c9d8c5eb3aa499732a3f9d16b94b
+<<<<<<<< HEAD:Fantasia/Assets/Freeui/ZOSMA/Stage/Back.meta
+guid: 432e76ef3cddfba4faa8aa5fb0ec879a
+folderAsset: yes
+========
+guid: 42b6ce6f0be43fa47a3ebd402ea82450
+>>>>>>>> 3ec1ce61276a761857504e9be2eca635440a7c0b:Fantasia/Assets/Import/Molehill.meta~Stashed changes.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

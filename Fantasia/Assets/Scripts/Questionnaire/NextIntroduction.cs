@@ -55,7 +55,7 @@ public class NextIntroduction : MonoBehaviour
         // Set ClusterValue in PlayerPrefs
         PlayerPrefs.SetInt("ClusterValue", clusterValue);
         
-        //riga aggiunta da Elia, provo a salvare una variabile che serve in palude
+        //riga aggiunta da Elia, provo a salvare variabili che servono in palude
         PlayerPrefs.SetInt("WordsFound", 0);
         PlayerPrefs.SetInt("Word1", 0);
         PlayerPrefs.SetInt("Word2", 0);

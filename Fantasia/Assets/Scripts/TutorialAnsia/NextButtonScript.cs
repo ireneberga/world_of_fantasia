@@ -27,9 +27,9 @@ public class NextButtonScript : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        //clust = 2;
+        
         clust = PlayerPrefs.GetInt("ClusterValue");
-        age = PlayerPrefs.GetFloat("Age");
+        //age = PlayerPrefs.GetFloat("Age");
         //age = 30;
         username = PlayerPrefs.GetString("Username");
         
@@ -83,7 +83,7 @@ public class NextButtonScript : MonoBehaviour
             "In the following game the dragon will move up and down according to the rhythm of the breath, try to follow the writes in the cloud with the arrows of your board");
         TutorialCharacterMovement.active = true;
 
-        if (age > 45f)
+        if (_mostro2=="small anxia" || _mostro2=="medium anxia")
         {
             arrowup.gameObject.SetActive(true);
             arrowdown.gameObject.SetActive(true);
@@ -153,21 +153,17 @@ public class NextButtonScript : MonoBehaviour
             {
                 if(currentLineIndex == 1)
                 {
-                    if(age>45f)
-                    {
-                        indlives.gameObject.SetActive(true);
-                    }
+                 
+                    indlives.gameObject.SetActive(true);
                         
                 }
                 else if (currentLineIndex == 2)
                 {
                     heart3.gameObject.SetActive(false);
                     
-                    if(age>45f)
-                    {
+                
                       indlives.gameObject.SetActive(false);
                       indlostlife.gameObject.SetActive(true);
-                    }
 
                 }
                 else if (currentLineIndex == 3)

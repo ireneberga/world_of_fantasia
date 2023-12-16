@@ -76,8 +76,14 @@ public class dialogue2: MonoBehaviour
         }
         else
         {
-            // If the speech is complete, move to scene 2
-            SceneManager.LoadScene("MonsterChoicePie"); // Make sure the scene name is correct
+            int currentValue = PlayerPrefs.GetInt("WordsFound", 0);
+            currentValue++;
+            PlayerPrefs.SetInt("WordsFound", currentValue);
+            PlayerPrefs.SetInt("Word2", 1);
+
+            PlayerPrefs.Save();
+            Debug.Log("Updated WordsFound by dialogueWord2: " + currentValue);
+            SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }
     }
 }
