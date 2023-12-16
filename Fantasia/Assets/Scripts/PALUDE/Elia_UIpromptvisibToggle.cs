@@ -108,7 +108,7 @@ public class InteractionPrompt : MonoBehaviour
                 ShowPrompt("Go forward to meet Falkor");
                 if (Input.GetKey(activateKey))
                 {
-                    SceneManager.LoadScene("TutorialAnsia");
+                    SceneManager.LoadScene("beforeAnsia");
                 }
             }
             else if (hit.collider.CompareTag("NPC_Word1"))

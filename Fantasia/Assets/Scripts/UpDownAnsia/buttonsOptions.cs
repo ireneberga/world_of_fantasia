@@ -9,7 +9,7 @@ public class buttonsOptions : MonoBehaviour
     
     public void Termina()
     {
-        SceneManager.LoadScene("UpDownAnsia");
+        SceneManager.LoadScene("finalGameSpeech");
     }
     
     public void Rincomincia()

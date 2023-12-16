@@ -102,7 +102,7 @@ public class finalSpeech : MonoBehaviour
         else
         {
             // If the speech is complete, move to scene 2
-            SceneManager.LoadScene("Monster"); // Make sure the scene name is correct
+            SceneManager.LoadScene("Credits"); // Make sure the scene name is correct
         }
     }
 }
