@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShrinkEnlargeCloud : MonoBehaviour
+public class ShrinkEnlargecGame : MonoBehaviour
 {
     public float initialPauseDuration = 2f;
     public float shrinkDuration = 4f;
@@ -43,7 +43,7 @@ public class ShrinkEnlargeCloud : MonoBehaviour
         else if (shrinking)
         {
             // Riduzione della sfera
-            float scale = Mathf.Lerp(4f, 2f, elapsedTime / shrinkDuration);
+            float scale = Mathf.Lerp(2f, 1.2f, elapsedTime / shrinkDuration);
             transform.localScale = new Vector3(scale, scale, scale);
 
             if (elapsedTime >= shrinkDuration)
@@ -57,7 +57,7 @@ public class ShrinkEnlargeCloud : MonoBehaviour
         else if (enlarging)
         {
             // Allargamento della sfera
-            float scale = Mathf.Lerp(2f, 4f, elapsedTime / enlargeDuration);
+            float scale = Mathf.Lerp(1.2f, 2f, elapsedTime / enlargeDuration);
             transform.localScale = new Vector3(scale, scale, scale);
 
             if (elapsedTime >= enlargeDuration)
@@ -73,7 +73,7 @@ public class ShrinkEnlargeCloud : MonoBehaviour
             // Pausa iniziale
             
             // Allargamento della sfera
-            float scale = Mathf.Lerp(2f, 4f, elapsedTime / initialPauseDuration);
+            float scale = Mathf.Lerp(1.2f, 2f, elapsedTime / initialPauseDuration);
             transform.localScale = new Vector3(scale, scale, scale);
             
              if (elapsedTime >= initialPauseDuration)

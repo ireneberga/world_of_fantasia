@@ -27,7 +27,7 @@ public class prePaludeSpeach : MonoBehaviour
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
             "The trees are growing again! Who knows the improvements that you can get going on in your journey...",
-            "In your life it may be happened several times to be stressed or sad",
+            "In your life it may be happened several times to be sad",
             "During the journey you will learn how to better manage these situations for you, for your family and for the people that you love",
             "Now you will enter in the swamp of sadness",
             "you will learn how not to be overwhelmed by bad thoughts, but to always look for something positive!",
