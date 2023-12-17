@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class NextIntroduction : MonoBehaviour
 {
+    public Slider mySlider;
+    public TextMeshProUGUI myText;
+
     int clusterSum;
     int clusterValue;
 
@@ -15,8 +19,10 @@ public class NextIntroduction : MonoBehaviour
     public Image targetImage1;
     private int anxietyMultiplier;
 
+    private float age;
+
     private void Start()
-    {   
+    {  
         depreMultiplier = PlayerPrefs.GetInt("ScaleMultiplier", 1);
         ApplyScaleDepre();
         anxietyMultiplier = PlayerPrefs.GetInt("ScaleMultiplier", 1);
@@ -27,6 +33,9 @@ public class NextIntroduction : MonoBehaviour
         {
             button.onClick.AddListener(OnButtonPressed);
         }
+
+        mySlider.onValueChanged.AddListener(UpdateTextValue);
+        age = mySlider.value;
     }
 
     public void OnButtonAnx (int newScaleMultiplier_a)
@@ -51,15 +60,15 @@ public class NextIntroduction : MonoBehaviour
         clusterSum = anxietyMultiplier + depreMultiplier;
 
         // Calculate clusterValue based on clusterSum
-        if (clusterSum <= 1)
+        if (anxietyMultiplier < 1 && depreMultiplier < 1 && age > 35)
         {
             clusterValue = 0;
         }
-        else if (clusterSum > 1 && clusterSum <= 2)
+        else if (anxietyMultiplier >= 1 && anxietyMultiplier <= 2 && depreMultiplier <= 1 && age > 35)
         {
             clusterValue = 1;
         }
-        else
+        else // all the other cases get comprehended in the most delicate cluster
         {
             clusterValue = 2;
         }
@@ -101,6 +110,15 @@ public class NextIntroduction : MonoBehaviour
             Vector3 newScale = new Vector3(depreMultiplier*0.5f + 0.5f, depreMultiplier*0.5f + 0.5f, 1f);
             targetImage_d.rectTransform.localScale = newScale;
         }
+    }
+
+    private void UpdateTextValue(float value)
+    {
+        // Update the text with the current slider value
+        myText.text = "" + value.ToString(); // Displaying the value with two decimal places
+
+        // Update the age variable in real-time
+        age = value;
     }
 }
 

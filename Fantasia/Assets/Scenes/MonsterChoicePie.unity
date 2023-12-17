@@ -1111,6 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetImage: {fileID: 0}
+  depreMultiplier: 0
 --- !u!114 &84510423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,7 +1254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c638131cc7f29f4db77739b3cc63a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDeactivate: {fileID: 438381797}
   objectToActivate: {fileID: 1433218582}
 --- !u!1 &154792005
 GameObject:
@@ -1948,6 +1948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetImage: {fileID: 0}
+  depreMultiplier: 0
 --- !u!114 &355801359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2556,7 +2557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c638131cc7f29f4db77739b3cc63a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDeactivate: {fileID: 438381797}
   objectToActivate: {fileID: 935939166}
 --- !u!1 &533987690
 GameObject:
@@ -2739,7 +2739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c638131cc7f29f4db77739b3cc63a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDeactivate: {fileID: 1433218582}
   objectToActivate: {fileID: 1422271466}
 --- !u!1 &542338269
 GameObject:
@@ -3310,7 +3309,6 @@ GameObject:
   - component: {fileID: 750466749}
   - component: {fileID: 750466748}
   - component: {fileID: 750466750}
-  - component: {fileID: 750466751}
   m_Layer: 5
   m_Name: DepreMonster
   m_TagString: Untagged
@@ -3388,20 +3386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetImage: {fileID: 0}
---- !u!114 &750466751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750466746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012c30699acaf2e4fa30f778c5955c77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetImage_d: {fileID: 0}
-  targetImage1: {fileID: 0}
+  depreMultiplier: 0
 --- !u!1 &757223277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,7 +3565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c638131cc7f29f4db77739b3cc63a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDeactivate: {fileID: 1423104792}
   objectToActivate: {fileID: 438381797}
 --- !u!1 &783792772
 GameObject:
@@ -4429,7 +4413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c638131cc7f29f4db77739b3cc63a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDeactivate: {fileID: 1433218582}
   objectToActivate: {fileID: 1423104792}
 --- !u!1 &1118761903
 GameObject:
@@ -5678,6 +5661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetImage: {fileID: 0}
+  anxietyMultiplier: 0
 --- !u!1 &1499118088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5726,7 +5710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c638131cc7f29f4db77739b3cc63a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDeactivate: {fileID: 935939166}
   objectToActivate: {fileID: 438381797}
 --- !u!1 &1514635315
 GameObject:
@@ -6184,6 +6167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetImage: {fileID: 0}
+  depreMultiplier: 0
 --- !u!114 &1590334139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6464,6 +6448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetImage: {fileID: 0}
+  depreMultiplier: 0
 --- !u!114 &1660505925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6714,7 +6699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c638131cc7f29f4db77739b3cc63a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDeactivate: {fileID: 1422271466}
   objectToActivate: {fileID: 1433218582}
 --- !u!1 &1799559954
 GameObject:
@@ -7030,6 +7014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012c30699acaf2e4fa30f778c5955c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySlider: {fileID: 1118761905}
+  myText: {fileID: 1025468198}
   targetImage_d: {fileID: 750466748}
   targetImage1: {fileID: 1477893865}
 --- !u!1 &1856817403
@@ -7121,6 +7107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetImage: {fileID: 0}
+  depreMultiplier: 0
 --- !u!114 &1877316349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7403,6 +7390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetImage: {fileID: 0}
+  depreMultiplier: 0
 --- !u!114 &2050747852
 MonoBehaviour:
   m_ObjectHideFlags: 0
