@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -318,7 +318,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.45490196, g: 0.8862745, b: 0.73333335, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1110,8 +1110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &84510423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,7 +1134,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.45490196, g: 0.8862745, b: 0.73333335, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1947,8 +1945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &355801359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1973,7 +1969,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.45490196, g: 0.8862745, b: 0.73333335, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2936,7 +2932,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.45490196, g: 0.8862745, b: 0.73333335, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3385,8 +3381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!1 &757223277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5660,8 +5654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f20b42ec4620b24a8db4acaaa876d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  anxietyMultiplier: 0
 --- !u!1 &1499118088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,9 +5933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fab00352b965d40bd9794b77d34e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 1118761905}
-  myText: {fileID: 1025468198}
-  saveButton: {fileID: 1628567805}
 --- !u!1 &1585617847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,8 +6155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &1590334139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6192,7 +6179,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.45490196, g: 0.8862745, b: 0.73333335, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -6447,8 +6434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &1660505925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6473,7 +6458,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.45594516, g: 0.8867924, b: 0.7332525, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7106,8 +7091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &1877316349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7132,7 +7115,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.45490196, g: 0.8862745, b: 0.73333335, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7389,8 +7372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &2050747852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7415,7 +7396,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.45490196, g: 0.8862745, b: 0.73333335, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
