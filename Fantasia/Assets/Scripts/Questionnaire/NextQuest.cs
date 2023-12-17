@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class NextQuest : MonoBehaviour
 {
-    public GameObject objectToDeactivate;
     public GameObject objectToActivate;
 
     private void Start()
@@ -20,12 +19,6 @@ public class NextQuest : MonoBehaviour
 
     public void OnButtonClick()
     {
-        // Deactivate the first object
-        if (objectToDeactivate != null)
-        {
-            objectToDeactivate.SetActive(false);
-        }
-
         // Activate the second object
         if (objectToActivate != null)
         {
