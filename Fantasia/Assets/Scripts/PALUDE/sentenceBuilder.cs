@@ -16,7 +16,6 @@ public class sentenceBuilder : MonoBehaviour
     public TMP_Dropdown drop2;
     public TMP_Dropdown drop3;
     public TMP_Text outputSentenceText;
-    private string[] rightWords;
     public Button Button;
     private int clust;
     private string word1_string;
@@ -26,10 +25,10 @@ public class sentenceBuilder : MonoBehaviour
     private void Start()
     {
         clust = PlayerPrefs.GetInt("ClusterValue");
+        Debug.Log("Sentence of cluster:" + clust);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Button.enabled = false;
-        //rightWords = new string[] { "resilience", "determination", "habits" };
         switch (clust)
         {
             case 0:
@@ -80,9 +79,6 @@ public class sentenceBuilder : MonoBehaviour
         {
             Button.enabled = true;
             GameObject.Find("Button").GetComponentInChildren<Text>().text = "Continue";
-            //drop1.gameObject.SetActive(false);
-            //drop2.gameObject.SetActive(false);
-            //drop3.gameObject.SetActive(false);
         }
         else
         {
@@ -93,12 +89,7 @@ public class sentenceBuilder : MonoBehaviour
     }
     void ChangeScene()
     {
-        int currentValue = PlayerPrefs.GetInt("WordsFound", 0);
-        currentValue++;
-        PlayerPrefs.SetInt("WordsFound", currentValue);
-        PlayerPrefs.Save();
-        //SceneManager.LoadScene("PALUDE", LoadSceneMode.Single);
-        SceneManager.LoadScene("PALUDE");//, LoadSceneMode.Single);
+        SceneManager.LoadScene("beforeAnsia");
     }
 
     void PopulateDropdown()
@@ -108,21 +99,18 @@ public class sentenceBuilder : MonoBehaviour
             case 0:
                 {
                     options = new string[] { "          ", "surrender", word1_string, "reluctance", word2_string, word3_string, "pessimism", "cinicism" };
-                    rightWords = new string[] { "resilience", "determination", "habits" };
                     sentencePieces = new string[] { "Cluster 0: Despite facing challenges, you have shown incredible", "in your journey. Your commitment to seeking support is a powerful demonstration of your", "for a brighter future. Embracing positive", ", such as gratitude and self-compassion, can significantly contribute to your overall well-being." };
                     break;
                 }
             case 1:
                 {
                     options = new string[] { "          ", "unresponsive", "nervousness", word1_string, " indifference", word2_string, "overindulgence", word3_string };
-                    rightWords = new string[] { "positivity", "self-care", "social" };
                     sentencePieces = new string[] { "Cluster 1: Embracing a mindset of", "through intentional daily", ", rituals, building a strong and supportive", "network, and prioritizing self-compassion are key strategies for fostering resilience and managing the challenges of anxiety" };
                     break;
                 }
             case 2:
                 {
                     options = new string[] { "          ", "unresponsive", "nervousness", word1_string, " indifference", word2_string, "overindulgence", word3_string };
-                    rightWords = new string[] { "positivity", "self-care", "social" };
                     sentencePieces = new string[] { "Cluster 2: Embracing a mindset of", "through intentional daily", ", rituals, building a strong and supportive", "network, and prioritizing self-compassion are key strategies for fostering resilience and managing the challenges of anxiety" };
                     break;
                 }

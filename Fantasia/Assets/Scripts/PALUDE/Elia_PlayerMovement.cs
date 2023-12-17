@@ -27,12 +27,11 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
-
+    private int last_location;
     public Transform orientation;
-
     float horizontalInput;
     float verticalInput;
-
+    bool teleported = false;
     Vector3 moveDirection;
 
     Rigidbody rb;
@@ -47,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        //teleport player to last known position
+        
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -57,6 +58,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!teleported)
+        {
+            Vector3 last_location = new Vector3(0, 0, 0);
+            last_location.x = PlayerPrefs.GetFloat("lastLocationX");
+            last_location.y = PlayerPrefs.GetFloat("lastLocationY");
+            last_location.z = PlayerPrefs.GetFloat("lastLocationZ");
+            Debug.Log("Position retrieved: " + last_location.x + ", " + last_location.y + ", " + last_location.z);
+            transform.position = last_location;
+            teleported = true;
+        }
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.1f, whatIsGround);
 
@@ -156,18 +167,5 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
-    /*private void SetPlayerPosition()
-    {
-        // Adjust the player's position based on the bool value
-        if (GameData.wordsCollected)
-        {
-            // Set player position for position A
-            transform.position = new Vector3(602, 105, 1082);
-        }
-        else
-        {
-            // Set player position for position B
-            transform.position = new Vector3(596, 102, 1130);
-        }
-    }*/
+
 }

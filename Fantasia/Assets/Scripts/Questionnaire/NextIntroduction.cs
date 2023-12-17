@@ -74,10 +74,13 @@ public class NextIntroduction : MonoBehaviour
         
         //riga aggiunta da Elia, provo a salvare una variabile che serve in palude
         PlayerPrefs.SetInt("WordsFound", 0);
-        PlayerPrefs.SetInt("word1", 0);
-        PlayerPrefs.SetInt("word2", 0);
-        PlayerPrefs.SetInt("word3", 0);
-        // Change to the next scene (replace "YourNextSceneName" with the actual scene name you want to load)
+        PlayerPrefs.SetInt("Word1", 0);
+        PlayerPrefs.SetInt("Word2", 0);
+        PlayerPrefs.SetInt("Word3", 0);
+
+        PlayerPrefs.SetFloat("lastLocationX", 508);
+        PlayerPrefs.SetFloat("lastLocationY", 102);
+        PlayerPrefs.SetFloat("lastLocationZ", 1965);
         PlayerPrefs.Save();
         SceneManager.LoadScene("PALUDE");
     }
