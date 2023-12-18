@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public Text textField;
     public AudioSource meditazione;
-    private float volumeOriginale;
+    //private float volumeOriginale;
 
     public static int health;
     // Start is called before the first frame update
@@ -51,9 +51,9 @@ public class GameManager : MonoBehaviour
         gameOver.gameObject.SetActive(false);
         //audioListener = audioGameObject.GetComponent<AudioSource>();
         //AudioListener.volume = 1f;
-        volumeOriginale = meditazione.volume;
+        //volumeOriginale = meditazione.volume;
         Time.timeScale = 1f;
-        meditazione.volume = 0.8f;
+        meditazione.volume = 0.4f;
         
        
 
