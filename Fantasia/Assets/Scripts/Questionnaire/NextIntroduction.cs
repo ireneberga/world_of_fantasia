@@ -93,7 +93,7 @@ public class NextIntroduction : MonoBehaviour
         PlayerPrefs.SetFloat("lastLocationZ", 1965);
         PlayerPrefs.SetInt("tutorialDone",0);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("PALUDE");
+        SceneManager.LoadScene("beforePalude");
     }
 
     private void ApplyScaleAnxiety()
