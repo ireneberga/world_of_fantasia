@@ -115,7 +115,7 @@ public class prePaludeSpeach : MonoBehaviour
         else
         {//setto posizione a cui spawnare il player nella palude
             // If the speech is complete, move to scene 2
-            sfondo.gameObject.SetActive(false);
+            //sfondo.gameObject.SetActive(false);
             SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }
     }

@@ -35,15 +35,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/beforeAnsiacambiata.unity
     guid: bebd97bfd5790304296524b74542aeeb
-  - enabled: 0
-    path: Assets/Scenes/beforeAnsia.unity
-    guid: 9060be31a24ecef41b91ce7261225129
   - enabled: 1
     path: Assets/Scenes/TutorialAnsia.unity
     guid: 4ccfe7d0b430c694f978602cc033dae4
   - enabled: 1
     path: Assets/Scenes/UpDownAnsia.unity
     guid: b0e8ef3ce84622c40924ba450163a980
+  - enabled: 1
+    path: Assets/Scenes/postAnsia.unity
+    guid: ee86d0113ed0e964d85ce3f4f532b314
   - enabled: 1
     path: Assets/Scenes/finalGameSpeech.unity
     guid: 71b3d3c06689cfd4b8ef85d74499583c
