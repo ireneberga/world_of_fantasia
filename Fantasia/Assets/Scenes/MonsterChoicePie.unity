@@ -1423,7 +1423,7 @@ RectTransform:
   m_Father: {fileID: 1585617848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4619,7 +4619,7 @@ RectTransform:
   m_Father: {fileID: 1856817404}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 3.7775116, y: 0}
   m_SizeDelta: {x: 27.555, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5110,7 +5110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1433218583
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6875,8 +6875,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Insert your age dragging the slider with the mouse or move it with the
-    arrows of your keyboard
+  m_text: Insert your age by dragging the slider with the mouse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 048da2dec602af143916575f1e2881de, type: 2}
   m_sharedMaterial: {fileID: 8734783180102846779, guid: 048da2dec602af143916575f1e2881de, type: 2}
