@@ -137,9 +137,6 @@ public class InteractionPrompt : MonoBehaviour
                     {
                         SceneManager.LoadScene("make_sentence", LoadSceneMode.Single);
                     }
-                    else if (currentWordsFound > 3) {
-                        ShowPrompt("You are ready to continue in your journey!");
-                    }
                     else if (currentWordsFound < 3)
                     {
                         ShowPrompt("You need to find more words!");
@@ -151,7 +148,10 @@ public class InteractionPrompt : MonoBehaviour
             }
         else
         {
-            ShowPrompt("");
+            if(tutorialFatto == 1)
+            {
+                ShowPrompt("");
+            }
         }
     }
 
