@@ -47,7 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/finalGameSpeech.unity
     guid: 71b3d3c06689cfd4b8ef85d74499583c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LastQuestionnaire.unity
     guid: aa5e91dcd358ac946b7d72ffa8400e6b
   - enabled: 1
