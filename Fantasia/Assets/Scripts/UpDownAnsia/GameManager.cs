@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     // private AudioSource audioListener;
 
     public Text textField;
+    public AudioSource meditazione;
+    private float volumeOriginale;
 
     public static int health;
     // Start is called before the first frame update
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        //clust = 2;
+        //clust = 0;
         clust = PlayerPrefs.GetInt("ClusterValue");
 
         if (clust == 0)
@@ -49,7 +51,9 @@ public class GameManager : MonoBehaviour
         gameOver.gameObject.SetActive(false);
         //audioListener = audioGameObject.GetComponent<AudioSource>();
         //AudioListener.volume = 1f;
+        volumeOriginale = meditazione.volume;
         Time.timeScale = 1f;
+        meditazione.volume = 0.8f;
         
        
 
@@ -96,6 +100,7 @@ public class GameManager : MonoBehaviour
                     // CharacterMovement.active = false;
                     // textField.text = "";
                     Time.timeScale = 0f;
+                    meditazione.volume = 0f;
                 }
 
 

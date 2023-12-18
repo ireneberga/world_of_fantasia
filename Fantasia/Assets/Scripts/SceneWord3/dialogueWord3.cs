@@ -21,12 +21,12 @@ public class dialogue3 : MonoBehaviour
         {
             case 0:
                 {
-                    word3 = "word3 clust 0";
+                    word3 = "mindset";
                     break;
                 }
             case 1:
                 {
-                    word3 = "word3 clust 1";
+                    word3 = "socialization";
                     break;
                 }
             case 2:
@@ -55,7 +55,7 @@ public class dialogue3 : MonoBehaviour
             "free your gaze from the chains of indifference and habit and learn to find joy in details, to be amazed",
             "by the small daily miracles and to immerse yourself in the emotions that the world has to offer.",
             "Look beyond the surface, and you will discover that even the most common things hide a treasure of beauty!",
-            "The word I give you is" + word3 + ", good luck in your journey!"
+            "The word I give you is " + word3 + ", good luck in your journey!"
             // Add additional speech lines here...
         };
     }

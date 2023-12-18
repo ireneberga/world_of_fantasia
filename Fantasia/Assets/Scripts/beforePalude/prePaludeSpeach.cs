@@ -27,10 +27,12 @@ public class prePaludeSpeach : MonoBehaviour
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
             "The trees are growing again! Who knows the improvements that you can get going on in your journey...",
-            "In your life it may be happened several times to be stressed or sad",
-            "During the journey you will learn how to better manage these situations for you, for your family and for the people that you love",
-            "Now you will enter in the swamp of sadness",
-            "you will learn how not to be overwhelmed by bad thoughts, but to always look for something positive!",
+            "In your life it may be happened several times to be sad",
+            "In the next level you will learn how to better manage these situations for you, for your family and for the people that you love",
+            "You will enter in the swamp of sadness, you may drown if you don't let someone help you",
+            "In the game you have to look for the spirits, they will guide you through the end of the swamp",
+            "In the real life you may rely on your family and on your friends to get through the hard moments", 
+            "Here you will learn how not to be overwhelmed by bad thoughts, but to always look for something positive!",
             "Have fun exploring and and try to get the best that you can from this experience",
             "I will be waiting for you at the end. Good luck!"
             
@@ -45,7 +47,9 @@ public class prePaludeSpeach : MonoBehaviour
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
             "The trees are growing again! Who knows the improvements that you can get going on in your journey...",
-            "Now you will enter in the swamp of sadness",
+            "Now you will enter in the swamp of sadness, you may drown if you don't let someone help you",
+            "In the game you have to look for the spirits, they will guide you through the end of the swamp",
+            "In the real life you may rely on your family and on your friends to get through the hard moments", 
             "you will learn managing some situations and always looking for something positive!",
             "You, your family and the people that you love will take advantage from this",
             "Don't give up if you feel disoriented",
@@ -60,10 +64,12 @@ public class prePaludeSpeach : MonoBehaviour
         // medium level of depression, hihgh level of anxiety. Age 25
         speechLines = new List<string>
         {
-            "PRE PALUDE!",
+            "Look, you identified your interiors monsters and Fantasia is already getting better!",
             "The trees are growing again! Who knows the improvements that you can get going on in your journey...",
-            "Now you will enter in the swamp of sadness",
-            "you will learn managing some situations and always looking for something positive!",
+            "Now you will enter in the swamp of sadness, you may drown if you don't let someone help you",
+            "In the game you have to look for the spirits, they will guide you through the end of the swamp",
+            "In the real life you may rely on your friends and on people that love you to get through the hard moments.",
+            "Here you will learn managing some situations and always looking for something positive!",
             "In the future you will take advantage from this, it will be easier for you to reach your goals",
             "Don't give up if you feel disoriented",
             "I'm your friend, I believe in you and I will be waiting for you at the end. Good luck!"
@@ -104,7 +110,7 @@ public class prePaludeSpeach : MonoBehaviour
             currentLineIndex++;
         }
         else
-        {
+        {//setto posizione a cui spawnare il player nella palude
             // If the speech is complete, move to scene 2
             SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }

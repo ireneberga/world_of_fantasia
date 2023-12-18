@@ -28,7 +28,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Awake()
         {
-            //clust = 2;
+            //clust = 0;
             clust = PlayerPrefs.GetInt("ClusterValue");
             Debug.Log(clust + " clust awake mov");
 

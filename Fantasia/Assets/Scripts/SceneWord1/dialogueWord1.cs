@@ -21,12 +21,12 @@ public class dialogue1 : MonoBehaviour
         {
             case 0:
                 {
-                    word1 = "word1 clust 0";
+                    word1 = "resilience";
                     break;
                 }
             case 1:
                 {
-                    word1 = "word1 clust 1";
+                    word1 = "positivity";
                     break;
                 }
             case 2:
