@@ -9,12 +9,14 @@ public class prePaludeSpeach : MonoBehaviour
     public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
     private List<string> speechLines;
     private int currentLineIndex = 0;
-    private int clust; 
+    private int clust;
+    public GameObject sfondo;
     
     private void Awake()
     {
         //clust = 1;
         clust = PlayerPrefs.GetInt("ClusterValue");
+        sfondo.gameObject.SetActive(false);
 
         
     }
@@ -82,6 +84,7 @@ public class prePaludeSpeach : MonoBehaviour
         // Check if there are still lines in the speech
         if (currentLineIndex == 0)
         {
+            sfondo.gameObject.SetActive(true);
             if (clust == 0)
             {
                 InitializeSpeechLineszero();
@@ -112,6 +115,7 @@ public class prePaludeSpeach : MonoBehaviour
         else
         {//setto posizione a cui spawnare il player nella palude
             // If the speech is complete, move to scene 2
+            sfondo.gameObject.SetActive(false);
             SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }
     }
