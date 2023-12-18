@@ -12,8 +12,10 @@ public class dialogue3 : MonoBehaviour
     private int currentLineIndex = 0;
     private int clust;
     private string word3;
+    public GameObject sfondo;
     private void Awake()
     {
+        sfondo.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         clust = PlayerPrefs.GetInt("ClusterValue");
@@ -65,6 +67,7 @@ public class dialogue3 : MonoBehaviour
         // Check if there are still lines in the speech
         if (currentLineIndex == 0)
         {
+            sfondo.gameObject.SetActive(true);
             InitializeSpeechLines();
             textField.text = speechLines[currentLineIndex];
             currentLineIndex++;
@@ -84,6 +87,7 @@ public class dialogue3 : MonoBehaviour
 
             PlayerPrefs.Save();
             Debug.Log("Updated WordsFound by dialogueWord3: " + currentValue);
+            sfondo.gameObject.SetActive(false);
             SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }
     }

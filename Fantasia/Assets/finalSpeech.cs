@@ -9,6 +9,7 @@ public class finalSpeech : MonoBehaviour
     public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
     private List<string> speechLines;
     private int currentLineIndex = 0;
+    public GameObject sfondo;
     
     private int clust; 
     
@@ -16,6 +17,7 @@ public class finalSpeech : MonoBehaviour
     {
         //clust = 0;
         clust = PlayerPrefs.GetInt("ClusterValue");
+        sfondo.gameObject.SetActive(false);
 
         
     }
@@ -73,6 +75,7 @@ public class finalSpeech : MonoBehaviour
         // Check if there are still lines in the speech
         if (currentLineIndex == 0)
         {
+            sfondo.gameObject.SetActive(true);
             if (clust == 0)
             {
                 InitializeSpeechLineszero();
@@ -102,6 +105,7 @@ public class finalSpeech : MonoBehaviour
         else
         {
             // If the speech is complete, move to scene 2
+            sfondo.gameObject.SetActive(false);
             SceneManager.LoadScene("Credits"); // Make sure the scene name is correct
         }
     }
