@@ -38,10 +38,6 @@ public class TutorialManager : MonoBehaviour
         yield return ShowPrompt("");
         PlayerPrefs.SetInt("tutorialDone", 1);
         middleText.gameObject.SetActive(true);
-
-        // Add more steps as needed
-
-        // Tutorial completed, you can do something here (e.g., hide UI, unlock player controls, etc.)
     }
 
     IEnumerator ShowPrompt(string message)
@@ -49,14 +45,10 @@ public class TutorialManager : MonoBehaviour
         if (middleText != null)
         {
             middleText.text = message;
-
-            // Activate the UI element
             middleText.gameObject.SetActive(true);
 
-            // Wait for a few seconds
             yield return new WaitForSeconds(3f);
 
-            // Deactivate the UI element
             middleText.gameObject.SetActive(false);
         }
     }

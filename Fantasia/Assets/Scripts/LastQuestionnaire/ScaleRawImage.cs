@@ -45,7 +45,9 @@ public class ScaleRawImages : MonoBehaviour
 
         // Calculate the scale factors based on the stored values
         float scaleFactor1 = Mathf.Clamp01(floatanxiety / maxScale);
+        Debug.Log("Scale anxiety factor: " + floatanxiety);
         float scaleFactor2 = Mathf.Clamp01(floatdepression / maxScale);
+        Debug.Log("Scale depression factor: " + floatdepression);
 
         // Set the scales of the RawImages
         SetRawImageScale(rawImage1, scaleFactor1);
