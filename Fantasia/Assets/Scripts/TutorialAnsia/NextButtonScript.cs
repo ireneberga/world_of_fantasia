@@ -136,7 +136,7 @@ public class NextButtonScript : MonoBehaviour
         }
         else if (_mostro2 == "small anxia")
         {
-            speechLines.Add("The lives that you have left are shown in the up left corner");
+            speechLines.Add("The lives that you have left are shown in the top left corner");
             // TranslateObject(heart1);
             // TranslateObject(heart2);
             // TranslateObject(heart3);
