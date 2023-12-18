@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class NextQuest_deac : MonoBehaviour
+public class NextQuest_del : MonoBehaviour
 {
     public GameObject objectToActivate;
-    public GameObject objectToDeActivate;
+    public GameObject objectToDeactivate;
 
     private void Start()
     {
@@ -25,9 +25,11 @@ public class NextQuest_deac : MonoBehaviour
         {
             objectToActivate.SetActive(true);
         }
-        if (objectToDeActivate != null)
+
+        if (objectToActivate != null)
         {
-            objectToDeActivate.SetActive(false);
+            objectToDeactivate.SetActive(false);
         }
     }
 }
+
