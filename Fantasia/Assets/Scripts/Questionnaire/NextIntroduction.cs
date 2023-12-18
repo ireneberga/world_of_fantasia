@@ -90,6 +90,7 @@ public class NextIntroduction : MonoBehaviour
         PlayerPrefs.SetFloat("lastLocationX", 508);
         PlayerPrefs.SetFloat("lastLocationY", 102);
         PlayerPrefs.SetFloat("lastLocationZ", 1965);
+        PlayerPrefs.SetInt("tutorialDone",0);
         PlayerPrefs.Save();
         SceneManager.LoadScene("PALUDE");
     }

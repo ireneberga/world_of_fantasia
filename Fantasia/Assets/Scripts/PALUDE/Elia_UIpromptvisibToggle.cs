@@ -26,6 +26,7 @@ public class InteractionPrompt : MonoBehaviour
     private string[] words_clust_1;
     private string[] words_clust_2;
     private int currentWordsFound;
+    private int tutorialFatto;
     private void Start()
     {
         tutorialFatto = PlayerPrefs.GetInt("tutorialDone", 0);
