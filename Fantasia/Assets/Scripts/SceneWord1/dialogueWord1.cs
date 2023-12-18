@@ -31,7 +31,7 @@ public class dialogue1 : MonoBehaviour
                 }
             case 2:
                 {
-                    word1 = "word1 clust 2";
+                    word1 = "resilience";
                     break;
                 }
         }

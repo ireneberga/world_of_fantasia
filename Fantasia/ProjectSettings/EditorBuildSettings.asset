@@ -33,6 +33,9 @@ EditorBuildSettings:
     path: Assets/Scenes/make_sentence.unity
     guid: 7e58ffc15403a4b44b2de821ced36da5
   - enabled: 1
+    path: Assets/Scenes/beforeAnsiacambiata.unity
+    guid: bebd97bfd5790304296524b74542aeeb
+  - enabled: 0
     path: Assets/Scenes/beforeAnsia.unity
     guid: 9060be31a24ecef41b91ce7261225129
   - enabled: 1

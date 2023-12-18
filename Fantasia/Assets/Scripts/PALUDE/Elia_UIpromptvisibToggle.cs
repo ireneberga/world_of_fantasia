@@ -32,7 +32,7 @@ public class InteractionPrompt : MonoBehaviour
         tutorialFatto = PlayerPrefs.GetInt("tutorialDone", 0);
         words_clust_0 = new string[] { "Resilience", "Determination", "Mindset" };
         words_clust_1 = new string[] { "Positivity", "Habits", "Socialization" };
-        words_clust_2 = new string[] { "clust_2_word_1", "clust_2_word_2", "clust_2_word_3" };
+        words_clust_2 = new string[] { "Resilience", "Healing", "Strength" };
         
         word1_bool = PlayerPrefs.GetInt("Word1",0);
         word2_bool = PlayerPrefs.GetInt("Word2",0);
@@ -81,7 +81,10 @@ public class InteractionPrompt : MonoBehaviour
             {
                 if (word1_bool == 1)
                 {
-                    ShowPrompt("You already spoke with me!");
+                    if (Input.GetKey(activateKey))
+                    {
+                        ShowPrompt("You already spoke with me!");
+                    }
                 }
                 else
                 {
@@ -92,13 +95,16 @@ public class InteractionPrompt : MonoBehaviour
                         SceneManager.LoadScene("scene_word_1");
                     }
                 }
-                
             }
+                
             else if (hit.collider.CompareTag("NPC_Word2"))
             {
                 if (word2_bool == 1)
                 {
-                    ShowPrompt("You already spoke with me!");
+                    if (Input.GetKey(activateKey))
+                    {
+                        ShowPrompt("You already spoke with me!");
+                    }
                 }
                 else
                 {
@@ -109,13 +115,15 @@ public class InteractionPrompt : MonoBehaviour
                         SceneManager.LoadScene("scene_word_2");
                     }
                 }
-
             }
             else if (hit.collider.CompareTag("NPC_Word3"))
             {
                 if (word3_bool == 1)
                 {
-                    ShowPrompt("You already spoke with me!");
+                    if (Input.GetKey(activateKey))
+                    {
+                        ShowPrompt("You already spoke with me!");
+                    }                   
                 }
                 else
                 {

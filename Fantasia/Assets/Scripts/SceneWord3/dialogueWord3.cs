@@ -12,8 +12,10 @@ public class dialogue3 : MonoBehaviour
     private int currentLineIndex = 0;
     private int clust;
     private string word3;
+    public GameObject sfondo;
     private void Awake()
     {
+        sfondo.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         clust = PlayerPrefs.GetInt("ClusterValue");
@@ -31,7 +33,7 @@ public class dialogue3 : MonoBehaviour
                 }
             case 2:
                 {
-                    word3 = "word3 clust 2";
+                    word3 = "strength";
                     break;
                 }
         }
@@ -41,7 +43,7 @@ public class dialogue3 : MonoBehaviour
         // Initialize the list and add your speech lines
         speechLines = new List<string>
         {
-            "Who is there?I can’t see you, because as you can see I'm blind.",
+            "Who is there? I can’t see you, because, as you can see, I'm blind.",
             "Anyway, whoever you are, let me introduce myself: I am the blind mole, one of the spirits that rules this wasteland.",
             "I live in eternal darkness, without ever having been able to see the light of day.",
             "It is a deep desire, to be able to see the wonders of the world that others describe, which unfortunately life has denied me.",
@@ -65,6 +67,7 @@ public class dialogue3 : MonoBehaviour
         // Check if there are still lines in the speech
         if (currentLineIndex == 0)
         {
+            sfondo.gameObject.SetActive(true);
             InitializeSpeechLines();
             textField.text = speechLines[currentLineIndex];
             currentLineIndex++;
@@ -84,6 +87,7 @@ public class dialogue3 : MonoBehaviour
 
             PlayerPrefs.Save();
             Debug.Log("Updated WordsFound by dialogueWord3: " + currentValue);
+            sfondo.gameObject.SetActive(false);
             SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
         }
     }
