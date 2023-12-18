@@ -21,10 +21,11 @@ public class sentenceBuilder : MonoBehaviour
     private string word1_string;
     private string word2_string;
     private string word3_string;
+    private string[] rightWords;
     // Start is called before the first frame update
     private void Start()
     {
-        clust = PlayerPrefs.GetInt("ClusterValue");
+        clust = PlayerPrefs.GetInt("ClusterValue",2);
         Debug.Log("Sentence of cluster:" + clust);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -33,23 +34,24 @@ public class sentenceBuilder : MonoBehaviour
         {
             case 0:
                 {
-                    word1_string = "word_1_clust_0";
-                    word2_string = "word_2_clust_0";
-                    word3_string = "word_3_clust_0";
+                    word1_string = "resilience";
+                    word2_string = "determination";
+                    word3_string = "mindset";
+
                     break;
                 }
             case 1:
                 {
-                    word1_string = "word_1_clust_1";
-                    word2_string = "word_2_clust_1";
-                    word3_string = "word_3_clust_1";
+                    word1_string = "positivity";
+                    word2_string = "habits";
+                    word3_string = "social";
                     break;
                 }
             case 2:
                 {
-                    word1_string = "word_1_clust_2";
-                    word2_string = "word_2_clust_2";
-                    word3_string = "word_3_clust_2";
+                    word1_string = "strength";
+                    word2_string = "resilience";
+                    word3_string = "healing";
                     break;
                 }
         }
@@ -98,20 +100,20 @@ public class sentenceBuilder : MonoBehaviour
         {
             case 0:
                 {
-                    options = new string[] { "          ", "surrender", word1_string, "reluctance", word2_string, word3_string, "pessimism", "cinicism" };
-                    sentencePieces = new string[] { "Cluster 0: Despite facing challenges, you have shown incredible", "in your journey. Your commitment to seeking support is a powerful demonstration of your", "for a brighter future. Embracing positive", ", such as gratitude and self-compassion, can significantly contribute to your overall well-being." };
+                    options = new string[] { "         ", "surrender", word3_string, "reluctance", word2_string, word1_string, "pessimism", "cinicism", "indifference" };
+                    sentencePieces = new string[] { "Despite facing challenges, you have shown incredible", "in your journey. Your commitment to seeking support is a powerful demonstration of your", "for a brighter future. Embracing positive", ", such as gratitude and self-compassion, can significantly contribute to your overall well-being." };
                     break;
                 }
             case 1:
                 {
-                    options = new string[] { "          ", "unresponsive", "nervousness", word1_string, " indifference", word2_string, "overindulgence", word3_string };
-                    sentencePieces = new string[] { "Cluster 1: Embracing a mindset of", "through intentional daily", ", rituals, building a strong and supportive", "network, and prioritizing self-compassion are key strategies for fostering resilience and managing the challenges of anxiety" };
+                    options = new string[] { "         ", "unresponsive", "nervousness", word2_string, "indifference", word1_string, "overindulgence", word3_string };
+                    sentencePieces = new string[] { "Embracing a mindset of", "through intentional daily", ", rituals, building a strong and supportive", "network, and prioritizing self-compassion are key strategies for fostering resilience and managing the challenges of anxiety" };
                     break;
                 }
             case 2:
                 {
-                    options = new string[] { "          ", "unresponsive", "nervousness", word1_string, " indifference", word2_string, "overindulgence", word3_string };
-                    sentencePieces = new string[] { "Cluster 2: Embracing a mindset of", "through intentional daily", ", rituals, building a strong and supportive", "network, and prioritizing self-compassion are key strategies for fostering resilience and managing the challenges of anxiety" };
+                    options = new string[] { "         ", "unresponsive", "nervousness", word1_string, "indifference", word3_string, "overindulgence", word2_string };
+                    sentencePieces = new string[] { "Your journey may be tough, but your "," is undeniable. Remember, your journey is uniquely yours, and every step you take is a testament to your ",". Embrace the light within, and know that, with time, "," unfolds." };
                     break;
                 }
         }

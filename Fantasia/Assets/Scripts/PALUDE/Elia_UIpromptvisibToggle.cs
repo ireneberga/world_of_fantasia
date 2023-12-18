@@ -26,10 +26,12 @@ public class InteractionPrompt : MonoBehaviour
     private string[] words_clust_1;
     private string[] words_clust_2;
     private int currentWordsFound;
+    private int tutorialFatto;
     private void Start()
     {
-        words_clust_0 = new string[] { "clust_0_word_1", "clust_0_word_2", "clust_0_word_3" };
-        words_clust_1 = new string[] { "clust_1_word_1", "clust_1_word_2", "clust_1_word_3" };
+        tutorialFatto = PlayerPrefs.GetInt("tutorialDone", 0);
+        words_clust_0 = new string[] { "Resilience", "Determination", "Mindset" };
+        words_clust_1 = new string[] { "Positivity", "Habits", "Socialization" };
         words_clust_2 = new string[] { "clust_2_word_1", "clust_2_word_2", "clust_2_word_3" };
         
         word1_bool = PlayerPrefs.GetInt("Word1",0);
@@ -135,9 +137,6 @@ public class InteractionPrompt : MonoBehaviour
                     {
                         SceneManager.LoadScene("make_sentence", LoadSceneMode.Single);
                     }
-                    else if (currentWordsFound > 3) {
-                        ShowPrompt("You are ready to continue in your journey!");
-                    }
                     else if (currentWordsFound < 3)
                     {
                         ShowPrompt("You need to find more words!");
@@ -149,7 +148,10 @@ public class InteractionPrompt : MonoBehaviour
             }
         else
         {
-            ShowPrompt("");
+            if(tutorialFatto == 1)
+            {
+                ShowPrompt("");
+            }
         }
     }
 
