@@ -112,7 +112,7 @@ public class NextButtonScript : MonoBehaviour
         // Inizializza la lista e aggiungi le tue linee di discorso
         speechLines = new List<string>();
         speechLines.Add(
-            "In the following game the dragon will move up and down according to the rhythm of the breath, try to follow the writes in the cloud with the arrows of your board");
+            "In the following game the dragon will move up and down according to the rhythm of the breath, try to follow the indications in the cloud with the arrows of your board");
         TutorialCharacterMovement.active = true;
 
         if (_mostro2=="small anxia" || _mostro2=="medium anxia" || _mostro2=="big anxia")
