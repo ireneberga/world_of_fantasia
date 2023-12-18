@@ -80,6 +80,7 @@ public class NextIntroduction : MonoBehaviour
         PlayerPrefs.SetInt("ClusterValue", clusterValue);
         PlayerPrefs.SetInt("DepreMultiplier1", depreMultiplier);
         PlayerPrefs.SetInt("AnxietyMultiplier1", anxietyMultiplier);
+        PlayerPrefs.SetFloat("Age", age);
         
         //riga aggiunta da Elia, provo a salvare una variabile che serve in palude
         PlayerPrefs.SetInt("WordsFound", 0);

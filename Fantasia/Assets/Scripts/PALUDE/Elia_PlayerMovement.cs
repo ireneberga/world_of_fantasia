@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerMovement : MonoBehaviour
+public class Elia_PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     private float moveSpeed;
