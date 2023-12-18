@@ -19,15 +19,24 @@ public class CharacterMovement : MonoBehaviour
     private int opposto2 = 0;
     public Text textField;
     public Text breathText;
-    
+    //public Vector3 posizioneDesiderata = new Vector3(-32.08f, 0f, 0-1.085f);
+    //public Vector3 inclinazioneDesiderata = new Vector3(-0.5f, 93.507f, 0f);
     private string mostro2 ;
 
     private int clust;
+    private float tempoIniziale;
 
     
 
     private void Awake()
         {
+            // Assegna la posizione desiderata
+            //transform.position = posizioneDesiderata;
+            // Assegna l'inclinazione desiderata in gradi (asse Y)
+            //transform.eulerAngles = inclinazioneDesiderata;
+            
+            
+            
             //clust = 0;
             clust = PlayerPrefs.GetInt("ClusterValue");
             Debug.Log(clust + " clust awake mov");
@@ -47,24 +56,30 @@ public class CharacterMovement : MonoBehaviour
             }
             
             Debug.Log(mostro2 + "awake mov");
+            
+            tempoIniziale = Time.time;
         }
     
    
    
         void Update()
         {
+            // Azzeramento di Time.deltaTime
+            //float deltaTimeAzzerato = Time.time - tempoIniziale;
             //if(active){
                 if (mostro2 == "big anxia" | mostro2 == "medium anxia" | mostro2 == "small anxia")
                 {
+                    // Calcola l'offset basato sul tempo trascorso dall'inizio della scena
+                    float offset = (2f * Mathf.PI / period) * (Time.time - tempoIniziale);
+                    
                     // Calcola il movimento in avanti lungo l'asse Z
                     transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.World);
 
                     // Calcola la posizione Y basata sulla funzione sinusoidale con fase modificata
-                    float yOffset = amplitude * Mathf.Sin((2f * Mathf.PI / period) * Time.time - Mathf.PI / 2f);
+                    float yOffset = amplitude * Mathf.Sin(offset - Mathf.PI / 2f);
 
                     // Calcola l'angolo dell'inclinazione basata sulla posizione Y
-                    float tangent = amplitude * (2f * Mathf.PI / period) *
-                                    Mathf.Cos((2f * Mathf.PI / period) * Time.time - Mathf.PI / 2f);
+                    float tangent = amplitude * (2f * Mathf.PI / period) * Mathf.Cos(offset - Mathf.PI / 2f);
 
                     // Applica la trasformazione lungo l'asse Y
                     transform.position = new Vector3(transform.position.x, yOffset, transform.position.z);

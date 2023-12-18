@@ -91,7 +91,7 @@ public class sentenceBuilder : MonoBehaviour
     }
     void ChangeScene()
     {
-        SceneManager.LoadScene("beforeAnsia");
+        SceneManager.LoadScene("beforeAnsiacambiata");
     }
 
     void PopulateDropdown()

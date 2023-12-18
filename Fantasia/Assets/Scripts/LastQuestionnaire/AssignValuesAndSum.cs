@@ -51,6 +51,12 @@ public class AssignValuesAndSum : MonoBehaviour
         Debug.Log("Dropdown 4: " + value4);
         Debug.Log("Dropdown 5: " + value5);
         Debug.Log("Dropdown 6: " + value6);
+        Debug.Log("Dropdown 7: " + value7);
+        Debug.Log("Dropdown 8: " + value8);
+        Debug.Log("Dropdown 9: " + value9);
+        Debug.Log("Dropdown 10: " + value10);
+        Debug.Log("Dropdown 11: " + value11);
+        Debug.Log("Dropdown 12: " + value12);
         Debug.Log("Sum1: " + sum1);
         Debug.Log("Sum2: " + sum2);
     }

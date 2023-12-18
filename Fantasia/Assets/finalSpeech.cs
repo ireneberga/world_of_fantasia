@@ -105,7 +105,7 @@ public class finalSpeech : MonoBehaviour
         else
         {
             // If the speech is complete, move to scene 2
-            sfondo.gameObject.SetActive(false);
+            //sfondo.gameObject.SetActive(false);
             SceneManager.LoadScene("Credits"); // Make sure the scene name is correct
         }
     }

@@ -20,7 +20,7 @@ public class buttonsOptions : MonoBehaviour
     
     public void Termina()
     {
-        SceneManager.LoadScene("finalGameSpeech");
+        SceneManager.LoadScene("postAnsia");
     }
     
     public void Rincomincia()
