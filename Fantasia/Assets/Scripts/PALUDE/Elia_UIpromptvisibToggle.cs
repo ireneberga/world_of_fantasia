@@ -81,7 +81,10 @@ public class InteractionPrompt : MonoBehaviour
             {
                 if (word1_bool == 1)
                 {
-                    ShowPrompt("You already spoke with me!");
+                    if (Input.GetKey(activateKey))
+                    {
+                        ShowPrompt("You already spoke with me!");
+                    }
                 }
                 else
                 {
@@ -92,13 +95,16 @@ public class InteractionPrompt : MonoBehaviour
                         SceneManager.LoadScene("scene_word_1");
                     }
                 }
-                
             }
+                
             else if (hit.collider.CompareTag("NPC_Word2"))
             {
                 if (word2_bool == 1)
                 {
-                    ShowPrompt("You already spoke with me!");
+                    if (Input.GetKey(activateKey))
+                    {
+                        ShowPrompt("You already spoke with me!");
+                    }
                 }
                 else
                 {
@@ -109,13 +115,15 @@ public class InteractionPrompt : MonoBehaviour
                         SceneManager.LoadScene("scene_word_2");
                     }
                 }
-
             }
             else if (hit.collider.CompareTag("NPC_Word3"))
             {
                 if (word3_bool == 1)
                 {
-                    ShowPrompt("You already spoke with me!");
+                    if (Input.GetKey(activateKey))
+                    {
+                        ShowPrompt("You already spoke with me!");
+                    }                   
                 }
                 else
                 {
