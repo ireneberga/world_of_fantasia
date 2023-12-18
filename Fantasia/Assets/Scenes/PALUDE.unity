@@ -613,9 +613,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1887342477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -325, y: 260}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 117.6, y: -35.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &241691885
@@ -1270,15 +1270,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782116362102059222, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 273.1
+      value: 272.8
       objectReference: {fileID: 0}
     - target: {fileID: 7782116362102059222, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 108.4
+      value: 108.45
       objectReference: {fileID: 0}
     - target: {fileID: 7782116362102059222, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1251.4
+      value: 1251.3
       objectReference: {fileID: 0}
     - target: {fileID: 7782116362102059222, guid: ff34d5f3f116de048972ab4ccd935c52, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1343,8 +1343,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.370949, y: 5.5771365, z: 2.066922}
-  m_Center: {x: 0.16929387, y: -1.6575196, z: -0.23971412}
+  m_Size: {x: 1.370949, y: 4.3666625, z: 1.3965259}
+  m_Center: {x: 0.16929387, y: -1.0566224, z: 0.09548421}
 --- !u!23 &538945201
 MeshRenderer:
   m_ObjectHideFlags: 0
