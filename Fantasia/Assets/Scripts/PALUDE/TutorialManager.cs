@@ -22,19 +22,19 @@ public class TutorialManager : MonoBehaviour
 
         yield return ShowPrompt("Use your mouse to look around");
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         yield return ShowPrompt("Use W, A, S, D to move");
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         
         yield return ShowPrompt("Use space to jump");
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         yield return ShowPrompt("Use Alt to run");
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         yield return ShowPrompt("");
         PlayerPrefs.SetInt("tutorialDone", 1);
         middleText.gameObject.SetActive(true);

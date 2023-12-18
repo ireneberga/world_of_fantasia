@@ -32,7 +32,7 @@ public class InteractionPrompt : MonoBehaviour
         tutorialFatto = PlayerPrefs.GetInt("tutorialDone", 0);
         words_clust_0 = new string[] { "Resilience", "Determination", "Mindset" };
         words_clust_1 = new string[] { "Positivity", "Habits", "Socialization" };
-        words_clust_2 = new string[] { "clust_2_word_1", "clust_2_word_2", "clust_2_word_3" };
+        words_clust_2 = new string[] { "Resilience", "Healing", "Strength" };
         
         word1_bool = PlayerPrefs.GetInt("Word1",0);
         word2_bool = PlayerPrefs.GetInt("Word2",0);

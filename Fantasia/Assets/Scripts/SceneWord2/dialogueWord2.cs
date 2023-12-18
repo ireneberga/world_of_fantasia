@@ -31,7 +31,7 @@ public class dialogue2: MonoBehaviour
                 }
             case 2:
                 {
-                    word2 = "word2 clust 2";
+                    word2 = "healing";
                     break;
                 }
         }       
@@ -54,7 +54,7 @@ public class dialogue2: MonoBehaviour
             "My dear traveller, don't make the same mistake as me:",
             "don't stay confined within your inner walls, open up to the outside world, meet new people, new places, new points of view, LIVE!",
             "Remember: How can a frog in a well understand how vast the ocean is?",
-            "This is mymessage: " + word2 + ". Good luck my friend!"
+            "This is my message: " + word2 + ". Good luck friend!"
             // Add additional speech lines here...
         };
     }

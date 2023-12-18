@@ -80,6 +80,7 @@ public class NextIntroduction : MonoBehaviour
         PlayerPrefs.SetInt("ClusterValue", clusterValue);
         PlayerPrefs.SetInt("DepreMultiplier1", depreMultiplier);
         PlayerPrefs.SetInt("AnxietyMultiplier1", anxietyMultiplier);
+        PlayerPrefs.SetFloat("Age", age);
         
         //riga aggiunta da Elia, provo a salvare una variabile che serve in palude
         PlayerPrefs.SetInt("WordsFound", 0);
@@ -87,9 +88,9 @@ public class NextIntroduction : MonoBehaviour
         PlayerPrefs.SetInt("Word2", 0);
         PlayerPrefs.SetInt("Word3", 0);
 
-        PlayerPrefs.SetFloat("lastLocationX", 508);
+        PlayerPrefs.SetFloat("lastLocationX", 620);
         PlayerPrefs.SetFloat("lastLocationY", 102);
-        PlayerPrefs.SetFloat("lastLocationZ", 1965);
+        PlayerPrefs.SetFloat("lastLocationZ", 1907);
         PlayerPrefs.SetInt("tutorialDone",0);
         PlayerPrefs.Save();
         SceneManager.LoadScene("PALUDE");
