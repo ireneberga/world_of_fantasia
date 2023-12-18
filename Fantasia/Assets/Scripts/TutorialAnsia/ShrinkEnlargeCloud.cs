@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ShrinkEnlargeCloud : MonoBehaviour
 {
-    public float initialPauseDuration = 2f;
+    public float initialPauseDuration = 3f;
     public float shrinkDuration = 4f;
     public float intermediatePauseDuration = 2f;
     public float enlargeDuration = 4f;
