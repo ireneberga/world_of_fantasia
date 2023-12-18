@@ -88,9 +88,9 @@ public class NextIntroduction : MonoBehaviour
         PlayerPrefs.SetInt("Word2", 0);
         PlayerPrefs.SetInt("Word3", 0);
 
-        PlayerPrefs.SetFloat("lastLocationX", 508);
-        PlayerPrefs.SetFloat("lastLocationY", 132);
-        PlayerPrefs.SetFloat("lastLocationZ", 1965);
+        PlayerPrefs.SetFloat("lastLocationX", 620);
+        PlayerPrefs.SetFloat("lastLocationY", 102);
+        PlayerPrefs.SetFloat("lastLocationZ", 1907);
         PlayerPrefs.SetInt("tutorialDone",0);
         PlayerPrefs.Save();
         SceneManager.LoadScene("beforePalude");
