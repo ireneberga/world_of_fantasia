@@ -61,11 +61,11 @@ public class NextIntroduction : MonoBehaviour
         clusterSum = anxietyMultiplier + depreMultiplier;
 
         // Calculate clusterValue based on clusterSum
-        if (age < 35  && anxietyMultiplier > 1 && depreMultiplier > 0)
+        if (age < 35  && ((anxietyMultiplier > 1 && depreMultiplier > 0) | (clusterSum > 3)))
         {
             clusterValue = 2;
         }
-        else if (age > 35 && anxietyMultiplier > 0 && depreMultiplier > 0)
+        else if (age > 35 && ((anxietyMultiplier > 0 && depreMultiplier > 0) | (clusterSum >3)))
         {
             clusterValue = 1;
         }
