@@ -28,7 +28,7 @@ public class prePaludeSpeach : MonoBehaviour
         speechLines = new List<string>
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
-            "The trees are growing again! Who knows the improvements that you can get going on in your journey...",
+            "Who knows the improvements that you can get going on in your journey...",
             "In your life it may be happened several times to be sad",
             "In the next level you will learn how to better manage these situations for you, for your family and for the people that you love",
             "You will enter in the swamp of sadness, you may drown if you don't let someone help you",
@@ -48,7 +48,7 @@ public class prePaludeSpeach : MonoBehaviour
         speechLines = new List<string>
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
-            "The trees are growing again! Who knows the improvements that you can get going on in your journey...",
+            "Who knows the improvements that you can get going on in your journey...",
             "Now you will enter in the swamp of sadness, you may drown if you don't let someone help you",
             "In the game you have to look for the spirits, they will guide you through the end of the swamp",
             "In the real life you may rely on your family and on your friends to get through the hard moments", 
@@ -67,7 +67,7 @@ public class prePaludeSpeach : MonoBehaviour
         speechLines = new List<string>
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
-            "The trees are growing again! Who knows the improvements that you can get going on in your journey...",
+            "Who knows the improvements that you can get going on in your journey...",
             "Now you will enter in the swamp of sadness, you may drown if you don't let someone help you",
             "In the game you have to look for the spirits, they will guide you through the end of the swamp",
             "In the real life you may rely on your friends and on people that love you to get through the hard moments.",
