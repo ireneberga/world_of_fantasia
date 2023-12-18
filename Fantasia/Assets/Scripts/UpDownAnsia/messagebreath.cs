@@ -14,7 +14,7 @@ public class messagebreath : MonoBehaviour
     
     IEnumerator StartWithDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         StartCoroutine(ComandiRespirazione());
     }
     
@@ -26,6 +26,7 @@ public class messagebreath : MonoBehaviour
             yield return hold();
             yield return inspira();
             yield return hold();
+            
            
         }
     }

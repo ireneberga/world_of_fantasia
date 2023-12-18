@@ -26,6 +26,7 @@ public class TutorialCharacterMovement : MonoBehaviour
     //public Text breathText;
     public Text tutorialText;
     private List<string>  speechLines;
+    private float tempoIniziale;
 
     private void Awake()
     {
@@ -50,6 +51,7 @@ public class TutorialCharacterMovement : MonoBehaviour
     void Start()
     {
         tutorialText.text = "This is a tutorial to help you understand how to use controls commands in the following game";
+        tempoIniziale = Time.time;
     }
    
         void Update()
@@ -57,15 +59,17 @@ public class TutorialCharacterMovement : MonoBehaviour
             if(active){
                 if (mostro2 == "big anxia" | mostro2 == "medium anxia" | mostro2 == "small anxia")
                 {
+                    // Calcola l'offset basato sul tempo trascorso dall'inizio della scena
+                    float offset = (2f * Mathf.PI / period) * (Time.time - tempoIniziale);
+                    
                     // Calcola il movimento in avanti lungo l'asse Z
                     transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.World);
 
                     // Calcola la posizione Y basata sulla funzione sinusoidale con fase modificata
-                    float yOffset = amplitude * Mathf.Sin((2f * Mathf.PI / period) * Time.time - Mathf.PI / 2f);
+                    float yOffset = amplitude * Mathf.Sin(offset - Mathf.PI / 2f);
 
                     // Calcola l'angolo dell'inclinazione basata sulla posizione Y
-                    float tangent = amplitude * (2f * Mathf.PI / period) *
-                                    Mathf.Cos((2f * Mathf.PI / period) * Time.time - Mathf.PI / 2f);
+                    float tangent = amplitude * (2f * Mathf.PI / period) * Mathf.Cos(offset - Mathf.PI / 2f);
 
                     // Applica la trasformazione lungo l'asse Y
                     transform.position = new Vector3(transform.position.x, yOffset, transform.position.z);
@@ -75,7 +79,6 @@ public class TutorialCharacterMovement : MonoBehaviour
 
                     // Applica la rotazione al personaggio
                     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
-
                     // Passa l'offset Y e il periodo alla classe CoinGenerator
                     //CoinGenerator.SetCharacterYOffsetAndPeriod(yOffset, period);
                 }
