@@ -26,10 +26,8 @@ public class InteractionPrompt : MonoBehaviour
     private string[] words_clust_1;
     private string[] words_clust_2;
     private int currentWordsFound;
-    private int tutorialFatto;
     private void Start()
     {
-        tutorialFatto = PlayerPrefs.GetInt("tutorialDone", 0);
         words_clust_0 = new string[] { "clust_0_word_1", "clust_0_word_2", "clust_0_word_3" };
         words_clust_1 = new string[] { "clust_1_word_1", "clust_1_word_2", "clust_1_word_3" };
         words_clust_2 = new string[] { "clust_2_word_1", "clust_2_word_2", "clust_2_word_3" };
@@ -151,10 +149,7 @@ public class InteractionPrompt : MonoBehaviour
             }
         else
         {
-            if(tutorialFatto == 1)
-            {
-                ShowPrompt("");
-            }
+            ShowPrompt("");
         }
     }
 
