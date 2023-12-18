@@ -24,9 +24,9 @@ public class beforeAnsiaSpeech : MonoBehaviour
         {
             "You have been great! you should be proud of you!",
             "Now you have improved on managing sadness",
-            "you shouldn't regret not having learnt it before",
-            "you should think about how your lifestyle can improve from now on!",
-            "take a little time to rest because in the following game, ",
+            "You shouldn't regret not having learnt it before",
+            "You should think about how your lifestyle can improve from now on!",
+            "take a little time to rest, because in the following game, ",
             "you will fight the interior monster of anxiety and you will learn how to manage it",
             "you will enjoy a relaxing flight with me while having a five minutes meditation",
             "Click next to start the tutorial",
