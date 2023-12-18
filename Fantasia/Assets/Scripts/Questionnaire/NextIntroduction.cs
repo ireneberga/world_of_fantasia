@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEditor.Presets;
 
 public class NextIntroduction : MonoBehaviour
 {
@@ -60,17 +61,17 @@ public class NextIntroduction : MonoBehaviour
         clusterSum = anxietyMultiplier + depreMultiplier;
 
         // Calculate clusterValue based on clusterSum
-        if (anxietyMultiplier < 1 && depreMultiplier < 1 && age > 35)
+        if (age < 35  && anxietyMultiplier > 1 && depreMultiplier > 0)
         {
-            clusterValue = 0;
+            clusterValue = 2;
         }
-        else if (anxietyMultiplier >= 1 && anxietyMultiplier <= 2 && depreMultiplier <= 1 && age > 35)
+        else if (age > 35 && anxietyMultiplier > 0 && depreMultiplier > 0)
         {
             clusterValue = 1;
         }
-        else // all the other cases get comprehended in the most delicate cluster
+        else
         {
-            clusterValue = 2;
+            clusterValue = 0;
         }
 
         // Debug: Print values to the console
