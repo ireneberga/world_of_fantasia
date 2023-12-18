@@ -980,11 +980,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 111483958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3572b542d7f80d84199cdd4877c4c66c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b7f709ae56162a4e838a5b45940f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1433218582}
-  objectToDeActivate: {fileID: 438381797}
+  objectToDeactivate: {fileID: 438381797}
 --- !u!1 &154792005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,11 +2571,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 535506550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3572b542d7f80d84199cdd4877c4c66c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b7f709ae56162a4e838a5b45940f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1422271466}
-  objectToDeActivate: {fileID: 1433218582}
+  objectToDeactivate: {fileID: 1433218582}
 --- !u!1 &542338269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,11 +5308,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1499118088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3572b542d7f80d84199cdd4877c4c66c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b7f709ae56162a4e838a5b45940f43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 438381797}
-  objectToDeActivate: {fileID: 935939166}
+  objectToDeactivate: {fileID: 935939166}
 --- !u!1 &1514635315
 GameObject:
   m_ObjectHideFlags: 0
