@@ -90,8 +90,8 @@ public class IntSpeech_postAnsia : MonoBehaviour
         else
         {
             // If the speech is complete, move to scene 2
-            //SceneManager.LoadScene("Credits");
-            SceneManager.LoadScene("LastQuestionnaire");
+            SceneManager.LoadScene("finalGameSpeech");
+            //SceneManager.LoadScene("LastQuestionnaire");
         }
     }
 }
