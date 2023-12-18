@@ -7,8 +7,7 @@ public class AudioController : MonoBehaviour
     public AudioClip audioClip3; // Audio nuotare
     public AudioClip audioClip4; // Audio saltare
     private AudioSource _audioSource;
-    private bool iskeypressed;
-    private bool isplaying;
+   
     public GameObject oggettoDaControllare;
 
     public int terrain;
@@ -110,6 +109,11 @@ public class AudioController : MonoBehaviour
       {
           StopAudio();
       }
+
+     if (Input.GetKeyDown(KeyCode.E))
+     {
+         PlayAudio(audioClip4);
+     }
     }
     
 
