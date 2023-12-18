@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
+using NUnit.Framework.Constraints;
 
 public class NextButtonScript : MonoBehaviour
 {
@@ -13,6 +16,7 @@ public class NextButtonScript : MonoBehaviour
     private int currentLineIndex = 0;
     public GameObject heart1, heart2, heart3, layer1, layer2, layer3, gameover, arrowup, arrowdown;
     public GameObject indcloud, indlives, indlostlife;
+    private bool flagarr = false;
 
     //private string _mostro1 = "small anxia";
     //public static bool flagtut = false;
@@ -22,12 +26,16 @@ public class NextButtonScript : MonoBehaviour
     private int clust;
     private string username;
     private float age;
+    public Text breathText;
     
     private void Awake()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         
+       
+
+        //clust = 2;
         clust = PlayerPrefs.GetInt("ClusterValue");
         //age = PlayerPrefs.GetFloat("Age");
         //age = 30;
@@ -75,19 +83,45 @@ public class NextButtonScript : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        string testoCasella = breathText.text;
+        if (flagarr)
+        {
+            if (testoCasella == "BREATH IN")
+            {
+                arrowup.gameObject.SetActive(true);
+                arrowdown.gameObject.SetActive(false);
+            }
+            else if (testoCasella == "BREATH OUT")
+            {
+                arrowup.gameObject.SetActive(false);
+                arrowdown.gameObject.SetActive(true);
+            }
+            else
+            {
+                arrowup.gameObject.SetActive(false);
+                arrowdown.gameObject.SetActive(false);
+            }
+        }
+    }
+
     private void InitializeSpeechLines()
     {
+        string testoCasella = breathText.text;
         // Inizializza la lista e aggiungi le tue linee di discorso
         speechLines = new List<string>();
         speechLines.Add(
             "In the following game the dragon will move up and down according to the rhythm of the breath, try to follow the writes in the cloud with the arrows of your board");
         TutorialCharacterMovement.active = true;
 
-        if (_mostro2=="small anxia" || _mostro2=="medium anxia")
+        if (_mostro2=="small anxia" || _mostro2=="medium anxia" || _mostro2=="big anxia")
         {
+          
             arrowup.gameObject.SetActive(true);
             arrowdown.gameObject.SetActive(true);
             indcloud.gameObject.SetActive(true);
+            flagarr = true;
         }
 
         if (_mostro2 == "big anxia")
@@ -144,6 +178,7 @@ public class NextButtonScript : MonoBehaviour
            arrowup.gameObject.SetActive(false);
            arrowdown.gameObject.SetActive(false);
            indcloud.gameObject.SetActive(false);
+           flagarr = false;
             
             
             // Mostra la prossima linea del discorso

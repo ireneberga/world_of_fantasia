@@ -150,7 +150,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 188946210}
+  m_Father: {fileID: 207850616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -267,8 +267,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0.0003365112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 46766052}
+  m_Children: []
   m_Father: {fileID: 207850616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -377,8 +376,11 @@ RectTransform:
   m_Children:
   - {fileID: 1022380258}
   - {fileID: 1546485967}
+  - {fileID: 2023555892}
   - {fileID: 1165754150}
+  - {fileID: 2064402541}
   - {fileID: 188946210}
+  - {fileID: 46766052}
   m_Father: {fileID: 722486783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1812,6 +1814,7 @@ MonoBehaviour:
   layer3: {fileID: 188946209}
   gameOver: {fileID: 1131087559}
   textField: {fileID: 951036993}
+  meditazione: {fileID: 2036109555}
 --- !u!4 &790992618
 Transform:
   m_ObjectHideFlags: 0
@@ -2549,8 +2552,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0.00028310544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2064402541}
+  m_Children: []
   m_Father: {fileID: 207850616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -3402,6 +3404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55664552b8bc8b74cb561e82d2b10682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meditazione: {fileID: 2036109555}
 --- !u!4 &2014463849
 Transform:
   m_ObjectHideFlags: 0
@@ -3456,7 +3459,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cdcc3c1f310591f498712fabd5569204, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.74
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3585,7 +3588,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1165754150}
+  m_Father: {fileID: 207850616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3633,7 +3636,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1546485967}
+    m_TransformParent: {fileID: 207850616}
     m_Modifications:
     - target: {fileID: 6152874841120644585, guid: 53f3c339866acc0488ca08f9ddda9980, type: 3}
       propertyPath: m_Pivot.x
@@ -3685,7 +3688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152874841120644585, guid: 53f3c339866acc0488ca08f9ddda9980, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.0000000018626451
       objectReference: {fileID: 0}
     - target: {fileID: 6152874841120644585, guid: 53f3c339866acc0488ca08f9ddda9980, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3693,7 +3696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152874841120644585, guid: 53f3c339866acc0488ca08f9ddda9980, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000018626451
+      value: -0.0000000055879354
       objectReference: {fileID: 0}
     - target: {fileID: 6152874841120644585, guid: 53f3c339866acc0488ca08f9ddda9980, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3818,10 +3821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 9162314399588556640, guid: a2050fd440d2cec4eab13ce421bff1af, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2023555892}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2050fd440d2cec4eab13ce421bff1af, type: 3}
 --- !u!1660057539 &9223372036854775807
