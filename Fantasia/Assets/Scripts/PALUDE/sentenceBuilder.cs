@@ -111,7 +111,7 @@ public class sentenceBuilder : MonoBehaviour
             case 2:
                 {
                     options = new string[] { "          ", "unresponsive", "nervousness", word1_string, " indifference", word2_string, "overindulgence", word3_string };
-                    sentencePieces = new string[] { "Cluster 2: Embracing a mindset of", "through intentional daily", ", rituals, building a strong and supportive", "network, and prioritizing self-compassion are key strategies for fostering resilience and managing the challenges of anxiety" };
+                    sentencePieces = new string[] { "", ", ","", "" };
                     break;
                 }
         }
