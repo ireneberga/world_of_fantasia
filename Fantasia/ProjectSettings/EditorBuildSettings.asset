@@ -45,8 +45,14 @@ EditorBuildSettings:
     path: Assets/Scenes/UpDownAnsia.unity
     guid: b0e8ef3ce84622c40924ba450163a980
   - enabled: 1
+    path: Assets/Scenes/postAnsia.unity
+    guid: ee86d0113ed0e964d85ce3f4f532b314
+  - enabled: 1
     path: Assets/Scenes/finalGameSpeech.unity
     guid: 71b3d3c06689cfd4b8ef85d74499583c
+  - enabled: 1
+    path: Assets/Scenes/LastQuestionnaire.unity
+    guid: aa5e91dcd358ac946b7d72ffa8400e6b
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 07454be67e8c4144da8661fac4a28d4b

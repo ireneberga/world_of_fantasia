@@ -1110,8 +1110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &84510423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1947,8 +1945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &355801359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3385,8 +3381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!1 &757223277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5660,8 +5654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f20b42ec4620b24a8db4acaaa876d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  anxietyMultiplier: 0
 --- !u!1 &1499118088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5906,7 +5898,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1527779934}
-  - component: {fileID: 1527779935}
   m_Layer: 0
   m_Name: SlidingObject
   m_TagString: Untagged
@@ -5929,21 +5920,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1433218583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1527779935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527779933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fab00352b965d40bd9794b77d34e4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySlider: {fileID: 0}
-  myText: {fileID: 0}
-  saveButton: {fileID: 0}
 --- !u!1 &1585617847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,8 +6142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &1590334139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6447,8 +6421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &1660505925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7106,8 +7078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &1877316349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7389,8 +7359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa2dec7ed9a13478080949a255002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetImage: {fileID: 0}
-  depreMultiplier: 0
 --- !u!114 &2050747852
 MonoBehaviour:
   m_ObjectHideFlags: 0
