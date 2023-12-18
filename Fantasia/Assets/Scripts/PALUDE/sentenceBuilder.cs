@@ -74,7 +74,6 @@ public class sentenceBuilder : MonoBehaviour
         string firstWord = drop1.options[drop1.value].text;
         string secondWord = drop2.options[drop2.value].text;
         string thirdWord = drop3.options[drop3.value].text;
-        //string sentence = $"Despite facing challenges, you have shown incredible {firstWord}  in your journey. Your commitment to seeking support is a powerful demonstration of your {secondWord} for a brighter future. Embracing positive {thirdWord} , such as gratitude and self-compassion, can significantly contribute to your overall well-being.";
         string sentence = $"{sentencePieces[0]} <b>{firstWord}</b> {sentencePieces[1]} <b>{secondWord}</b> {sentencePieces[2]} <b>{thirdWord}</b> {sentencePieces[3]}";
         outputSentenceText.text = sentence;
         if (firstWord == word1_string && secondWord == word2_string && thirdWord == word3_string)

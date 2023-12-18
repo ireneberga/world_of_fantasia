@@ -7,7 +7,7 @@ using TMPro;
 
 public class dialogue2: MonoBehaviour
 {
-    public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
+    public TextMeshProUGUI textField;
     private List<string> speechLines;
     private int currentLineIndex = 0;
     private int clust;
@@ -83,7 +83,7 @@ public class dialogue2: MonoBehaviour
 
             PlayerPrefs.Save();
             Debug.Log("Updated WordsFound by dialogueWord2: " + currentValue);
-            SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
+            SceneManager.LoadScene("PALUDE");
         }
     }
 }

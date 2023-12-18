@@ -7,7 +7,7 @@ using TMPro;
 
 public class dialogue3 : MonoBehaviour
 {
-    public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
+    public TextMeshProUGUI textField;
     private List<string> speechLines;
     private int currentLineIndex = 0;
     private int clust;
@@ -88,7 +88,7 @@ public class dialogue3 : MonoBehaviour
             PlayerPrefs.Save();
             Debug.Log("Updated WordsFound by dialogueWord3: " + currentValue);
             sfondo.gameObject.SetActive(false);
-            SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
+            SceneManager.LoadScene("PALUDE");
         }
     }
 }

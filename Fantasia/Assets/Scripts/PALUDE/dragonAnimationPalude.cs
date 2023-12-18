@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DragonController : MonoBehaviour
 {
-    public Transform target; // Assign the target (player) in the Inspector
+    public Transform target;
     public float rotationSpeed = 5f;
     public float hoverAmplitude = 0.5f;
     public float hoverSpeed = 2f;
@@ -17,7 +17,7 @@ public class DragonController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
         }
 
-        // Fluctuate in the Y direction (hover)
+        // Fluctuate in the Y direction
         float hoverOffset = Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude;
         transform.position = new Vector3(transform.position.x, hoverOffset + 103, transform.position.z);
     }

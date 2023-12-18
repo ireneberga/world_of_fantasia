@@ -1,18 +1,22 @@
+using System;
 using UnityEngine;
 
 public class ShrinkEnlargecGame : MonoBehaviour
 {
-    public float initialPauseDuration = 2f;
+    public float initialPauseDuration = 3f;
     public float shrinkDuration = 4f;
     public float intermediatePauseDuration = 2f;
     public float enlargeDuration = 4f;
-
+    
     private float elapsedTime = 0f;
     private bool shrinking = false;
     private bool ristretto = false;
     private bool allargato = false; 
     private bool enlarging = false;
     private bool isPaused = false;
+   
+
+   
 
     void Update()
     {

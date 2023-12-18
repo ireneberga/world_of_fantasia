@@ -6,7 +6,7 @@ using TMPro;
 
 public class prePaludeSpeach : MonoBehaviour
 {
-    public TextMeshProUGUI textField; // Use TextMeshProUGUI instead of Text
+    public TextMeshProUGUI textField;
     private List<string> speechLines;
     private int currentLineIndex = 0;
     private int clust;
@@ -23,8 +23,6 @@ public class prePaludeSpeach : MonoBehaviour
 
     private void InitializeSpeechLineszero()
     {
-        // Initialize the list and add your speech lines
-        //low levels of anxiaty and depression, age 45
         speechLines = new List<string>
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
@@ -43,8 +41,6 @@ public class prePaludeSpeach : MonoBehaviour
     
     private void InitializeSpeechLinesuno()
     {
-        // Initialize the list and add your speech lines
-        // medium levels of anxiety and depression, age 45
         speechLines = new List<string>
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
@@ -62,8 +58,6 @@ public class prePaludeSpeach : MonoBehaviour
     
     private void InitializeSpeechLinesdue()
     {
-        // Initialize the list and add your speech lines
-        // medium level of depression, hihgh level of anxiety. Age 25
         speechLines = new List<string>
         {
             "Look, you identified your interiors monsters and Fantasia is already getting better!",
@@ -113,10 +107,8 @@ public class prePaludeSpeach : MonoBehaviour
             currentLineIndex++;
         }
         else
-        {//setto posizione a cui spawnare il player nella palude
-            // If the speech is complete, move to scene 2
-            //sfondo.gameObject.SetActive(false);
-            SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
+        {
+            SceneManager.LoadScene("PALUDE"); 
         }
     }
 }

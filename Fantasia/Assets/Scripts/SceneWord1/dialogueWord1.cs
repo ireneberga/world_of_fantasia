@@ -38,7 +38,6 @@ public class dialogue1 : MonoBehaviour
     }
     private void InitializeSpeechLines()
     {
-        // Initialize the list and add your speech lines
         speechLines = new List<string>
         {
             "Hi brave wanderer, I am the turtle of the swamp, one of the spirits that governs this wasteland!",
@@ -53,7 +52,6 @@ public class dialogue1 : MonoBehaviour
             "only with willpower you will be able to cross the finish line!",
             "Don't rush, but instead PERSEVERE!",
             "This is for you: " + word1 + ". You can do this!"
-            // Add additional speech lines here...
         };
     }
 
@@ -81,7 +79,7 @@ public class dialogue1 : MonoBehaviour
 
             PlayerPrefs.Save();
             Debug.Log("Updated WordsFound by dialogueWord1: " + currentValue);
-            SceneManager.LoadScene("PALUDE"); // Make sure the scene name is correct
+            SceneManager.LoadScene("PALUDE");
         }
     }
 }
